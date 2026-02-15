@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure Plant | Identity Reveal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;500;700&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            /* Zen Minimalist Palette */
+            --bg-color: #fdfcf8;
+            /* Rice Paper White */
+            --text-color: #4a4a4a;
+            /* Sumi Ink Grey */
+            --accent-green: #849b87;
+            /* Matcha Tea Green */
+            --accent-stone: #a8a29e;
+            /* River Stone */
+            --bg-secondary: #f4f3ef;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Zen Kaku Gothic New', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            overflow-x: hidden;
+        }
+
+        /* Typography */
+        h1,
+        h2,
+        h3,
+        .serif {
+            font-family: 'Noto Serif JP', serif;
+            letter-spacing: 0.05em;
+        }
+
+        /* Slide Container */
+        .slides-container {
+            height: 100vh;
+            width: 100vw;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+        }
+
+        section {
+            height: 100vh;
+            width: 100vw;
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 4rem;
+            position: relative;
+            text-align: center;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        /* Hero animations */
+        @keyframes flowUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .flow-up {
+            animation: flowUp 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            opacity: 0;
+        }
+
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        .delay-4 {
+            animation-delay: 1.2s;
+        }
+
+        /* Slide 1: Intro */
+        .logo-main {
+            max-width: 350px;
+            margin-bottom: 3rem;
+            /* Blend mode helps ink texture sit nicely on paper bg */
+            mix-blend-mode: multiply;
+        }
+
+        h1.brand-name {
+            font-size: 4rem;
+            color: var(--accent-green);
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+        }
+
+        p.tagline {
+            font-size: 1.2rem;
+            color: var(--accent-stone);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        /* Slide 2: Philosophy */
+        .circle-text {
+            max-width: 700px;
+            font-size: 1.5rem;
+            line-height: 2;
+            color: #57534e;
+        }
+
+        .highlight {
+            color: var(--accent-green);
+            font-weight: 500;
+        }
+
+        /* Slide 3: Visual Identity */
+        .palette-display {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .swatch {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            /* Circles for Zen vibe */
+            margin: 0 auto 1rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .swatch-label {
+            display: block;
+            font-size: 0.9rem;
+            color: var(--accent-stone);
+        }
+
+        /* Slide 4: Products */
+        .key-visual {
+            max-width: 400px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+        }
+
+        /* Scroll Hint */
+        .scroll-line {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 1px;
+            height: 80px;
+            background: linear-gradient(to bottom, var(--accent-green), transparent);
+            transform: translateX(-50%);
+            opacity: 0.5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="slides-container">
+
+        <!-- SLIDE 1: INTRO -->
+        <section id="intro">
+            <img src="assets/logo.png" alt="Pure Plant Logo" class="logo-main flow-up">
+            <h1 class="brand-name serif flow-up delay-1">Pure Plant</h1>
+            <p class="tagline flow-up delay-2">Balance. Harmony. Nature.</p>
+            <div class="scroll-line flow-up delay-4"></div>
+        </section>
+
+        <!-- SLIDE 2: THE PHILOSOPHY -->
+        <section id="philosophy" style="background-color: var(--bg-secondary);">
+            <div class="circle-text">
+                <p class="flow-up">"In a world of noise,</p>
+                <p class="flow-up delay-1">we choose <span class="highlight">silence</span>."</p>
+                <br>
+                <p class="flow-up delay-2" style="font-size: 1.1rem; color: var(--accent-stone);">
+                    Pure Plant is not just ingredients.<br>
+                    It is the ritual of returning to oneself.
+                </p>
+            </div>
+        </section>
+
+        <!-- SLIDE 3: VISUAL IDENTITY -->
+        <section id="identity">
+            <h2 class="serif flow-up" style="font-size: 2.5rem; color: var(--text-color);">The Elements</h2>
+            <p class="flow-up delay-1" style="color: var(--accent-stone); margin-top: 1rem;">Inspired by the tea
+                ceremony.</p>
+
+            <div class="palette-display flow-up delay-2">
+                <div>
+                    <div class="swatch" style="background-color: #849b87;"></div>
+                    <span class="swatch-label">Matcha</span>
+                </div>
+                <div>
+                    <div class="swatch" style="background-color: #a8a29e;"></div>
+                    <span class="swatch-label">Stone</span>
+                </div>
+                <div>
+                    <div class="swatch" style="background-color: #4a4a4a;"></div>
+                    <span class="swatch-label">Sumi Ink</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 4: SOCIAL MEDIA -->
+        <section id="social">
+            <h2 class="serif flow-up" style="font-size: 2.5rem; margin-bottom: 2rem;">Digital Presence</h2>
+            <div class="palette-display flow-up delay-1" style="gap: 1.5rem;">
+                <img src="assets/pure_plant_social_ingredient_1768904659028.png" alt="Social Post 1"
+                    style="width: 250px; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.05);">
+                <img src="assets/pure_plant_social_lifestyle_1768904676342.png" alt="Social Post 2"
+                    style="width: 250px; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.05);">
+                <img src="assets/pure_plant_social_quote_1768904698898.png" alt="Social Post 3"
+                    style="width: 250px; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.05);">
+            </div>
+            <p class="flow-up delay-2" style="margin-top: 1.5rem; color: var(--accent-stone);">Ritual. Atmosphere.
+                Wisdom.</p>
+        </section>
+
+        <!-- SLIDE 5: PRODUCT VISION -->
+        <section id="product">
+            <h2 class="serif flow-up" style="font-size: 2.5rem;">The Vessel</h2>
+            <!-- Using the key visual we generated earlier as a placeholder, though it was 'rainforest' style, 
+                 it likely fits 'nature' enough. If too jarring, we focus on the logo. 
+                 Let's use the bottle image but acknowledging it's a concept. -->
+            <img src="assets/pure_plant_key_visual_bottle_1768903922067.png" alt="Product Concept"
+                class="key-visual flow-up delay-1">
+            <p class="flow-up delay-2" style="margin-top: 2rem; color: var(--accent-stone);">Amber glass. Paper. Earth.
+            </p>
+        </section>
+
+        <!-- SLIDE 5: LAUNCH -->
+        <section id="launch" style="background-color: var(--bg-secondary);">
+            <h2 class="serif flow-up" style="font-size: 2.5rem;">Launch Cycle</h2>
+            <div class="flow-up delay-1" style="text-align: left; margin-top: 2rem; font-size: 1.2rem; line-height: 2;">
+                <div>Checking Phase 1: <strong style="color: var(--accent-green);">Identity Sealed</strong></div>
+                <div>Opening Phase 2: <strong>Packaging Design</strong></div>
+                <div>Opening Phase 3: <strong>Market Entry</strong></div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.querySelectorAll('.flow-up').forEach(el => {
+                        el.style.animationPlayState = 'running';
+                        // Reset animation to replay it
+                        el.style.animation = 'none';
+                        el.offsetHeight; /* trigger reflow */
+                        el.style.animation = null;
+                    });
+                }
+            });
+        }, { threshold: 0.3 });
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+
+</html>

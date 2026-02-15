@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Pure Plant | Asli Chemistry</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&amp;family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Pure Plant | Asli Chemistry</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&amp;family=Space+Grotesk:wght@300..700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -34,212 +42,332 @@
             },
         }
     </script>
-<style>
+    <style>
         body {
             font-family: 'Space Grotesk', sans-serif;
             background-color: #1A2F23;
         }
+
         .fragment-overlay {
             clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
         }
+
         .heading-gold {
             color: #D4AF37;
             font-family: 'Bodoni Moda', serif;
         }
+
         .blurred-item {
             filter: blur(4px);
             opacity: 0.6;
         }
+
+        .logo-seal {
+            height: 48px;
+            width: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid rgba(212, 175, 55, 0.4);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .logo-seal:hover {
+            transform: scale(1.1);
+            border-color: #D4AF37;
+        }
+
+        .logo-seal-lg {
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+        }
     </style>
 </head>
+
 <body class="bg-background-dark text-white selection:bg-primary selection:text-background-dark">
-<div class="relative flex min-h-screen flex-col overflow-x-hidden">
-<!-- TopNavBar -->
-<header class="fixed top-0 z-50 w-full border-b border-white/10 bg-background-dark/80 backdrop-blur-md px-6 md:px-20 py-4">
-<div class="mx-auto flex max-w-7xl items-center justify-between">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary text-3xl">eco</span>
-<h2 class="heading-gold text-2xl font-bold tracking-tighter">PURE PLANT</h2>
-</div>
-<nav class="hidden md:flex items-center gap-10">
-<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest" href="#">The Offering</a>
-<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest" href="#">Alchemy</a>
-<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest" href="#">Our Roots</a>
-<a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest" href="#">Shop</a>
-</nav>
-<div class="flex items-center gap-6">
-<button class="flex items-center gap-2 group">
-<span class="material-symbols-outlined text-white group-hover:text-primary transition-colors">shopping_bag</span>
-<span class="text-xs uppercase tracking-tighter hidden sm:block">Cart (0)</span>
-</button>
-<div class="h-10 w-10 border border-primary/30 p-0.5">
-<div class="h-full w-full bg-center bg-cover" data-alt="User profile avatar icon" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCuy7dbFLVpAy_9vc3Y9IW-vaRPvXeVVD0dy_bhFexHPJPUdT2fGKLCDxEF5zkHv6bDDmUPAncqWUZ8cvgW2O3b0Kwno8AKuGd3QJylFEkUGdfBQn56MsDZB9OoD6UP-bcf6PXf6gGTqLfUR0vSiaL06lAnaQx75BcAmEgdUc1OR0W7Cp9sDfjMMJj2FiLgF4903jFyRopAgL0yV7NLv5Rb-vkX4GdJMjPnQwRUXR7GUVChpuVSUpd1pclmU1EAgpJCz3QI3PmocuE");'></div>
-</div>
-</div>
-</div>
-</header>
-<main class="flex-grow pt-20">
-<!-- HeroSection -->
-<section class="relative min-h-[90vh] flex items-center px-6 md:px-20 py-12 overflow-hidden">
-<div class="absolute right-0 top-0 w-2/3 h-full z-0 opacity-40 md:opacity-100">
-<div class="w-full h-full bg-center bg-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Cinematic forest photo of South Asian model with long black hair" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAemqWA3mPDw7ousKTxiHe0NjYAvuk71PvufCmZDC6sJoeto3pfGQrRdqqvPflPzibTLa-udHY_BfJsjHD27M6Q9dDbnno6zZPK-qBzhFkhIGTH4I-JQPsDW_6v2xv68v9LViX9aPA_nAJsc0jm2rrUeLnwi8BSwWvbFswijlqNOldoj959wkQQmmIkMT1tuJGBIONAWmMFxnHxxaqdTxTslE3skFT0kS3z4pEoPVicVs1peF47PYEMnxR3XcPYm6VMVUEdPyCpEcA");'>
-</div>
-<div class="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/40 to-transparent"></div>
-</div>
-<div class="relative z-10 max-w-4xl">
-<div class="flex flex-col gap-0">
-<span class="text-accent-sage font-body uppercase tracking-[0.5em] mb-4 block">Botanical Excellence</span>
-<h1 class="heading-gold text-7xl md:text-9xl font-black leading-[0.85] tracking-tighter mb-8">
-                            ASLI<br/>CHEMISTRY
+    <div class="relative flex min-h-screen flex-col overflow-x-hidden">
+        <!-- TopNavBar -->
+        <header
+            class="fixed top-0 z-50 w-full border-b border-white/10 bg-background-dark/80 backdrop-blur-md px-6 md:px-20 py-4">
+            <div class="mx-auto flex max-w-7xl items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <a href="/"><img src="assets/logo_seal.jpg" alt="Pure Plant Logo" class="logo-seal" /></a>
+                    <h2 class="heading-gold text-2xl font-bold tracking-tighter">PURE PLANT</h2>
+                </div>
+                <nav class="hidden md:flex items-center gap-10">
+                    <a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest"
+                        href="#offering">The Offering</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest"
+                        href="#collection">Shop</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest"
+                        href="presentation/">Brand Identity</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors uppercase tracking-widest"
+                        href="#footer">Our Roots</a>
+                </nav>
+                <div class="flex items-center gap-6">
+                    <a href="https://wa.me/923001234567" target="_blank" rel="noopener noreferrer"
+                        class="flex items-center gap-2 group">
+                        <span
+                            class="material-symbols-outlined text-white group-hover:text-primary transition-colors">chat</span>
+                        <span class="text-xs uppercase tracking-tighter hidden sm:block">WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <main class="flex-grow pt-20">
+            <!-- HeroSection -->
+            <section class="relative min-h-[90vh] flex items-center px-6 md:px-20 py-12 overflow-hidden">
+                <div class="absolute right-0 top-0 w-2/3 h-full z-0 opacity-40 md:opacity-100">
+                    <div class="w-full h-full bg-center bg-cover grayscale hover:grayscale-0 transition-all duration-700"
+                        data-alt="Cinematic forest photo of South Asian model with long black hair"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAemqWA3mPDw7ousKTxiHe0NjYAvuk71PvufCmZDC6sJoeto3pfGQrRdqqvPflPzibTLa-udHY_BfJsjHD27M6Q9dDbnno6zZPK-qBzhFkhIGTH4I-JQPsDW_6v2xv68v9LViX9aPA_nAJsc0jm2rrUeLnwi8BSwWvbFswijlqNOldoj959wkQQmmIkMT1tuJGBIONAWmMFxnHxxaqdTxTslE3skFT0kS3z4pEoPVicVs1peF47PYEMnxR3XcPYm6VMVUEdPyCpEcA");'>
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/40 to-transparent">
+                    </div>
+                </div>
+                <div class="relative z-10 max-w-4xl">
+                    <div class="flex flex-col gap-0">
+                        <span class="text-accent-sage font-body uppercase tracking-[0.5em] mb-4 block">Botanical
+                            Excellence</span>
+                        <h1 class="heading-gold text-7xl md:text-9xl font-black leading-[0.85] tracking-tighter mb-8">
+                            ASLI<br />CHEMISTRY
                         </h1>
-<div class="max-w-md border-l-2 border-primary pl-6 mb-10">
-<p class="text-white/80 font-body text-lg leading-relaxed">
-                                Reclaim your roots with the alchemical fusion of ancient botanicals. Pure Plant botanical shampoo crafted in Pakistan for the discerning soul.
+                        <div class="max-w-md border-l-2 border-primary pl-6 mb-10">
+                            <p class="text-white/80 font-body text-lg leading-relaxed">
+                                Reclaim your roots with the alchemical fusion of ancient botanicals. Pure Plant
+                                botanical shampoo crafted in Pakistan for the discerning soul.
                             </p>
-</div>
-<div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-<button class="bg-primary text-background-dark px-10 py-5 font-bold uppercase tracking-widest hover:bg-white transition-colors text-sm">
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+                            <button
+                                class="bg-primary text-background-dark px-10 py-5 font-bold uppercase tracking-widest hover:bg-white transition-colors text-sm">
                                 RECLAIM YOUR ROOTS - PKR 1399
                             </button>
-<div class="flex items-center gap-2 text-accent-sage px-4">
-<span class="material-symbols-outlined text-sm">verified</span>
-<span class="text-xs uppercase tracking-widest font-bold">100% Organic Origin</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Floating Product Image (Overlapping Layer) -->
-<div class="absolute bottom-10 right-20 w-64 h-80 z-20 hidden lg:block border-4 border-background-dark shadow-2xl">
-<div class="w-full h-full bg-center bg-cover" data-alt="Amber shampoo bottle in natural light" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCBl2lu6-YJjtiJspCzV_r4LJPxUM_Ar7G-_sHw2trVhTRQdvhGC5XRMTIg4myfseKCO3qs6yzPbq9qalBLNndU4dsucubhW74RzmzXUguaU3mYEi06jc9eG3t-HKl3keo7jXJydYglb1j5V5itv5xpTGxWM0jF8l4OCNmVR69S1k-EwdmGBJ6CofdUk3dqg5zK96tNZXnp_L5uv5ano1o07MZo4wQJ-yqXnPXCk4FfdASxUGsiTRvWeUqiPcplQB4R6pG8T8XfBTw");'></div>
-</div>
-</section>
-<!-- FeatureSection (The Offering) -->
-<section class="bg-forest-deep px-6 md:px-20 py-24">
-<div class="max-w-7xl mx-auto">
-<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-<div class="max-w-2xl">
-<h2 class="heading-gold text-5xl font-bold mb-6">The Offering</h2>
-<p class="text-accent-sage text-xl font-light">Potent botanicals selected through ancient alchemical traditions to restore your hair's natural vitality.</p>
-</div>
-<div class="text-primary text-sm uppercase tracking-[0.3em] font-bold pb-2 border-b border-primary">Explore Ingredients</div>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-px bg-white/10 border border-white/10">
-<!-- Ingredient 1 -->
-<div class="bg-background-dark p-8 hover:bg-primary group transition-all duration-300 cursor-help">
-<div class="h-40 w-full mb-6 overflow-hidden">
-<div class="w-full h-full bg-center bg-cover group-hover:scale-110 transition-transform duration-500" data-alt="Bhringraj herbs macro shot" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCN1z6sS8PBsH_9UQMgKXsoPMLhOZYJreKCVFoEPvg7b7cNWJGB2PiUD22wT1XMGlQ0Un7Pm0cqoL5_UqyQn0niBKHASL8YhsgKb9zkS7UTowIaRSPP9jqDFzcV0AIkcPZ43N4Z3YtIYJDo_DywAMa2WRdbHR6z-tD3fs4l2xsc3eKToQ1ZF4yDi0Qc73S8BG7yxBUvv4giPqIU-tLu9Z5kF4bky4S3wMr1cdU7N4gtAwHN44wsBdzXlBynvYR9Fzw59q3PhM7fYZw");'></div>
-</div>
-<h3 class="heading-gold group-hover:text-background-dark text-xl font-bold mb-2 uppercase">Bhringraj</h3>
-<p class="text-accent-sage group-hover:text-background-dark/80 text-xs uppercase tracking-widest italic">Balon ka Raja</p>
-<div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity text-background-dark text-sm">The King of Hair. Renowned for preventing hair loss and promoting dark, lustrous growth.</div>
-</div>
-<!-- Ingredient 2 -->
-<div class="bg-background-dark p-8 hover:bg-primary group transition-all duration-300 cursor-help">
-<div class="h-40 w-full mb-6 overflow-hidden">
-<div class="w-full h-full bg-center bg-cover group-hover:scale-110 transition-transform duration-500" data-alt="Black kalonji seeds macro shot" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC512FGx5yRMftjdZSBw3HGvg0RhAR5c-4iEM_T8EyiZSwebei97Y_6FTuFEeiuEhMdj5fyYAYBU5Y-E0eKzdn57Ojea1rN9ahtvvw76ih0U2SM0oAnBWJE_fvpImYsEAZpFjT0cmRk_3ohFj3rTRDib8bQsffSo0sOrGKmJ7nL8IM2OTAgtXiDsyJWsKpkczkTVDmSjNb6UZyrNxEYQCwbaNoFUaS16S_sjsOgrVfVrw08qAm1OzcIlAj1AtEbQtJtovyW2cPDcpw");'></div>
-</div>
-<h3 class="heading-gold group-hover:text-background-dark text-xl font-bold mb-2 uppercase">Kalonji</h3>
-<p class="text-accent-sage group-hover:text-background-dark/80 text-xs uppercase tracking-widest italic">Shifa ka Beej</p>
-<div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity text-background-dark text-sm">The miracle seed. Rich in antioxidants to protect hair from environmental damage.</div>
-</div>
-<!-- Ingredient 3 -->
-<div class="bg-background-dark p-8 hover:bg-primary group transition-all duration-300 cursor-help">
-<div class="h-40 w-full mb-6 overflow-hidden">
-<div class="w-full h-full bg-center bg-cover group-hover:scale-110 transition-transform duration-500" data-alt="Onion slices and extracts" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCFtPwhBZ-br--ChdW-dJOjfiMJhPHMeSfnkpKAhS32zcwsXKFCvzbE2EDda_n4UYGDlC-yjeHiBm9Cp9Y4Jp9xmSGo3RDpJdNM7wPQbRYZeEdGbbm6dBB1nlCS2fiNJedjZnPFqATdQHofR7tQ9Gw3t8b8iJyYf2fTN1isMjC_HOEQLScrG5X7AWFvhtWniPOEUKvEvyBYNMG2OfZNq4iA7PbE_iycaBg7czfoVf1jBpqOF8AFs_PI05006mgz3QPYj5w-KcIp3z0");'></div>
-</div>
-<h3 class="heading-gold group-hover:text-background-dark text-xl font-bold mb-2 uppercase">Onion</h3>
-<p class="text-accent-sage group-hover:text-background-dark/80 text-xs uppercase tracking-widest italic">Root strengthener</p>
-<div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity text-background-dark text-sm">High sulfur content that supports strong and thick hair, preventing breakage.</div>
-</div>
-<!-- Ingredient 4 -->
-<div class="bg-background-dark p-8 hover:bg-primary group transition-all duration-300 cursor-help">
-<div class="h-40 w-full mb-6 overflow-hidden">
-<div class="w-full h-full bg-center bg-cover group-hover:scale-110 transition-transform duration-500" data-alt="Fresh ginger roots" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBytdnx2Le_i942VHT4fBINPifDNCBqh1BZ3-eiNv_GpfdlAfwQTtgspRECnDXYPpeid85-cgSsFCeILL4SADZ_ZXnzLMa7gtp4Yw4OzjZfkKHU7TlZfk9A3brGffS6BgfqVeOFw_kY5fttWWQJaZAaUZPJXUB1wDsv7VxuOD3eVr1Y9eOA5ZsMGBHm_f4sVvaIIA4gNZ_Gxp4sbVbP61ZauQxwL9PMVNybDcVgWQ3sMBbp9XpgbRVcotJtqDoHXpUtABbMZIJ3NlA");'></div>
-</div>
-<h3 class="heading-gold group-hover:text-background-dark text-xl font-bold mb-2 uppercase">Ginger</h3>
-<p class="text-accent-sage group-hover:text-background-dark/80 text-xs uppercase tracking-widest italic">Scalp stimulator</p>
-<div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity text-background-dark text-sm">Boosts circulation to the scalp, stimulating hair follicles for new growth.</div>
-</div>
-<!-- Ingredient 5 -->
-<div class="bg-background-dark p-8 hover:bg-primary group transition-all duration-300 cursor-help">
-<div class="h-40 w-full mb-6 overflow-hidden">
-<div class="w-full h-full bg-center bg-cover group-hover:scale-110 transition-transform duration-500" data-alt="Reetha soapnuts" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAxgYvpY1FsloZcbJ7NdfLXOUlHz4rzZ702iIyT0YI-ctbcM2hWtjbY1heEHs3sGQcWgRKs3ilrryXrMJ3xJ-uXA4to3CtlFk-06deCjcadurBoXzyoSDQAzNAioD8GRj1ArFqRSwoGoe3UfgrU0iQTj-izqTStw23MVdCaT6qx3YyPjjAOT3lOVwfP9SCV2XDOjbCkzkqAW4LiCv52yxhV8WlNgoHmyWV9ZbvFF4VmJ-_YHEugIPINaK_ykP9XGywl1ZqXPfSaAZM");'></div>
-</div>
-<h3 class="heading-gold group-hover:text-background-dark text-xl font-bold mb-2 uppercase">Reetha</h3>
-<p class="text-accent-sage group-hover:text-background-dark/80 text-xs uppercase tracking-widest italic">Natural cleanser</p>
-<div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity text-background-dark text-sm">Soapnuts that provide a gentle, chemical-free lather without stripping oils.</div>
-</div>
-</div>
-</div>
-</section>
-<!-- TextGrid (Shop/Collection) -->
-<section class="px-6 md:px-20 py-24 border-t border-white/5">
-<div class="max-w-7xl mx-auto">
-<h2 class="heading-gold text-4xl font-bold mb-12 uppercase tracking-tight">The Collection</h2>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<!-- Active Product -->
-<div class="relative group border border-primary p-6 bg-forest-deep">
-<div class="absolute top-4 right-4 bg-primary text-background-dark text-[10px] font-bold px-2 py-1 uppercase tracking-widest">In Stock</div>
-<div class="aspect-square bg-center bg-cover mb-6 border border-white/5" data-alt="Pure Plant Scalp Balance Shampoo bottle" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA4bolfRGCT0PcbMvGO_aMKeUxc7mS_b-9FoWxPfKkC-RkK67QAoBG5J38Q2Qrm0YdHX0TfvXsttxbomWlWh05uKHTQWCldUGS4q7JeYMY9fYLTfbn6h_jX9toBsMyXs8thq7xKwH9lT7lQEr8QFeXO-bA4sX17xCYO791LwUW1_A3L7m1UdyL2_wVRyJziLivrP5t5R-X019igA-vySSDlxkAW1xI2v5iEoDAGuZxoCye2i6k6XMK2LE8wyMCTN1vaWRK_GB8FlOQ");'></div>
-<h3 class="text-white text-2xl font-body font-bold mb-1">Scalp Balance Shampoo</h3>
-<p class="text-primary font-bold mb-4">PKR 1399 — Pure Alchemy</p>
-<button class="w-full bg-primary/10 border border-primary text-primary py-4 uppercase text-xs font-bold tracking-widest hover:bg-primary hover:text-background-dark transition-all">
+                            <div class="flex items-center gap-2 text-accent-sage px-4">
+                                <span class="material-symbols-outlined text-sm">verified</span>
+                                <span class="text-xs uppercase tracking-widest font-bold">100% Organic Origin</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Floating Product Image (Overlapping Layer) -->
+                <div
+                    class="absolute bottom-10 right-20 w-64 h-80 z-20 hidden lg:block border-4 border-background-dark shadow-2xl">
+                    <div class="w-full h-full bg-center bg-cover" data-alt="Amber shampoo bottle in natural light"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCBl2lu6-YJjtiJspCzV_r4LJPxUM_Ar7G-_sHw2trVhTRQdvhGC5XRMTIg4myfseKCO3qs6yzPbq9qalBLNndU4dsucubhW74RzmzXUguaU3mYEi06jc9eG3t-HKl3keo7jXJydYglb1j5V5itv5xpTGxWM0jF8l4OCNmVR69S1k-EwdmGBJ6CofdUk3dqg5zK96tNZXnp_L5uv5ano1o07MZo4wQJ-yqXnPXCk4FfdASxUGsiTRvWeUqiPcplQB4R6pG8T8XfBTw");'>
+                    </div>
+                </div>
+            </section>
+            <!-- FeatureSection (The Offering) -->
+            <a id="offering"></a>
+            <section class="bg-forest-deep px-6 md:px-20 py-24">
+                <div class="max-w-7xl mx-auto">
+                    <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                        <div class="max-w-2xl">
+                            <h2 class="heading-gold text-5xl font-bold mb-6">The Offering</h2>
+                            <p class="text-accent-sage text-xl font-light">Potent botanicals selected through ancient
+                                alchemical traditions to restore your hair's natural vitality.</p>
+                        </div>
+                        <div
+                            class="text-primary text-sm uppercase tracking-[0.3em] font-bold pb-2 border-b border-primary">
+                            Explore Ingredients</div>
+                    </div>
+                    <div
+                        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-px bg-white/10 border border-white/10">
+                        <!-- Ingredient 1 -->
+                        <div
+                            class="bg-background-dark p-8 hover:bg-primary group transition-all duration-300 cursor-help">
+                            <div class="h-40 w-full mb-6 overflow-hidden">
+                                <div class="w-full h-full bg-center bg-cover group-hover:scale-110 transition-transform duration-500"
+                                    data-alt="Bhringraj herbs macro shot"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCN1z6sS8PBsH_9UQMgKXsoPMLhOZYJreKCVFoEPvg7b7cNWJGB2PiUD22wT1XMGlQ0Un7Pm0cqoL5_UqyQn0niBKHASL8YhsgKb9zkS7UTowIaRSPP9jqDFzcV0AIkcPZ43N4Z3YtIYJDo_DywAMa2WRdbHR6z-tD3fs4l2xsc3eKToQ1ZF4yDi0Qc73S8BG7yxBUvv4giPqIU-tLu9Z5kF4bky4S3wMr1cdU7N4gtAwHN44wsBdzXlBynvYR9Fzw59q3PhM7fYZw");'>
+                                </div>
+                            </div>
+                            <h3 class="heading-gold group-hover:text-background-dark text-xl font-bold mb-2 uppercase">
+                                Bhringraj</h3>
+                            <p
+                                class="text-accent-sage group-hover:text-background-dark/80 text-xs uppercase tracking-widest italic">
+                                Balon ka Raja</p>
+                            <div
+                                class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity text-background-dark text-sm">
+                                The King of Hair. Renowned for preventing hair loss and promoting dark, lustrous growth.
+                            </div>
+                        </div>
+                        <!-- Ingredient 2 -->
+                        <div
+                            class="bg-background-dark p-8 hover:bg-primary group transition-all duration-300 cursor-help">
+                            <div class="h-40 w-full mb-6 overflow-hidden">
+                                <div class="w-full h-full bg-center bg-cover group-hover:scale-110 transition-transform duration-500"
+                                    data-alt="Black kalonji seeds macro shot"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC512FGx5yRMftjdZSBw3HGvg0RhAR5c-4iEM_T8EyiZSwebei97Y_6FTuFEeiuEhMdj5fyYAYBU5Y-E0eKzdn57Ojea1rN9ahtvvw76ih0U2SM0oAnBWJE_fvpImYsEAZpFjT0cmRk_3ohFj3rTRDib8bQsffSo0sOrGKmJ7nL8IM2OTAgtXiDsyJWsKpkczkTVDmSjNb6UZyrNxEYQCwbaNoFUaS16S_sjsOgrVfVrw08qAm1OzcIlAj1AtEbQtJtovyW2cPDcpw");'>
+                                </div>
+                            </div>
+                            <h3 class="heading-gold group-hover:text-background-dark text-xl font-bold mb-2 uppercase">
+                                Kalonji</h3>
+                            <p
+                                class="text-accent-sage group-hover:text-background-dark/80 text-xs uppercase tracking-widest italic">
+                                Shifa ka Beej</p>
+                            <div
+                                class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity text-background-dark text-sm">
+                                The miracle seed. Rich in antioxidants to protect hair from environmental damage.</div>
+                        </div>
+                        <!-- Ingredient 3 -->
+                        <div
+                            class="bg-background-dark p-8 hover:bg-primary group transition-all duration-300 cursor-help">
+                            <div class="h-40 w-full mb-6 overflow-hidden">
+                                <div class="w-full h-full bg-center bg-cover group-hover:scale-110 transition-transform duration-500"
+                                    data-alt="Onion slices and extracts"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCFtPwhBZ-br--ChdW-dJOjfiMJhPHMeSfnkpKAhS32zcwsXKFCvzbE2EDda_n4UYGDlC-yjeHiBm9Cp9Y4Jp9xmSGo3RDpJdNM7wPQbRYZeEdGbbm6dBB1nlCS2fiNJedjZnPFqATdQHofR7tQ9Gw3t8b8iJyYf2fTN1isMjC_HOEQLScrG5X7AWFvhtWniPOEUKvEvyBYNMG2OfZNq4iA7PbE_iycaBg7czfoVf1jBpqOF8AFs_PI05006mgz3QPYj5w-KcIp3z0");'>
+                                </div>
+                            </div>
+                            <h3 class="heading-gold group-hover:text-background-dark text-xl font-bold mb-2 uppercase">
+                                Onion</h3>
+                            <p
+                                class="text-accent-sage group-hover:text-background-dark/80 text-xs uppercase tracking-widest italic">
+                                Root strengthener</p>
+                            <div
+                                class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity text-background-dark text-sm">
+                                High sulfur content that supports strong and thick hair, preventing breakage.</div>
+                        </div>
+                        <!-- Ingredient 4 -->
+                        <div
+                            class="bg-background-dark p-8 hover:bg-primary group transition-all duration-300 cursor-help">
+                            <div class="h-40 w-full mb-6 overflow-hidden">
+                                <div class="w-full h-full bg-center bg-cover group-hover:scale-110 transition-transform duration-500"
+                                    data-alt="Fresh ginger roots"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBytdnx2Le_i942VHT4fBINPifDNCBqh1BZ3-eiNv_GpfdlAfwQTtgspRECnDXYPpeid85-cgSsFCeILL4SADZ_ZXnzLMa7gtp4Yw4OzjZfkKHU7TlZfk9A3brGffS6BgfqVeOFw_kY5fttWWQJaZAaUZPJXUB1wDsv7VxuOD3eVr1Y9eOA5ZsMGBHm_f4sVvaIIA4gNZ_Gxp4sbVbP61ZauQxwL9PMVNybDcVgWQ3sMBbp9XpgbRVcotJtqDoHXpUtABbMZIJ3NlA");'>
+                                </div>
+                            </div>
+                            <h3 class="heading-gold group-hover:text-background-dark text-xl font-bold mb-2 uppercase">
+                                Ginger</h3>
+                            <p
+                                class="text-accent-sage group-hover:text-background-dark/80 text-xs uppercase tracking-widest italic">
+                                Scalp stimulator</p>
+                            <div
+                                class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity text-background-dark text-sm">
+                                Boosts circulation to the scalp, stimulating hair follicles for new growth.</div>
+                        </div>
+                        <!-- Ingredient 5 -->
+                        <div
+                            class="bg-background-dark p-8 hover:bg-primary group transition-all duration-300 cursor-help">
+                            <div class="h-40 w-full mb-6 overflow-hidden">
+                                <div class="w-full h-full bg-center bg-cover group-hover:scale-110 transition-transform duration-500"
+                                    data-alt="Reetha soapnuts"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAxgYvpY1FsloZcbJ7NdfLXOUlHz4rzZ702iIyT0YI-ctbcM2hWtjbY1heEHs3sGQcWgRKs3ilrryXrMJ3xJ-uXA4to3CtlFk-06deCjcadurBoXzyoSDQAzNAioD8GRj1ArFqRSwoGoe3UfgrU0iQTj-izqTStw23MVdCaT6qx3YyPjjAOT3lOVwfP9SCV2XDOjbCkzkqAW4LiCv52yxhV8WlNgoHmyWV9ZbvFF4VmJ-_YHEugIPINaK_ykP9XGywl1ZqXPfSaAZM");'>
+                                </div>
+                            </div>
+                            <h3 class="heading-gold group-hover:text-background-dark text-xl font-bold mb-2 uppercase">
+                                Reetha</h3>
+                            <p
+                                class="text-accent-sage group-hover:text-background-dark/80 text-xs uppercase tracking-widest italic">
+                                Natural cleanser</p>
+                            <div
+                                class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity text-background-dark text-sm">
+                                Soapnuts that provide a gentle, chemical-free lather without stripping oils.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- TextGrid (Shop/Collection) -->
+            <a id="collection"></a>
+            <section class="px-6 md:px-20 py-24 border-t border-white/5">
+                <div class="max-w-7xl mx-auto">
+                    <h2 class="heading-gold text-4xl font-bold mb-12 uppercase tracking-tight">The Collection</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Active Product -->
+                        <div class="relative group border border-primary p-6 bg-forest-deep">
+                            <div
+                                class="absolute top-4 right-4 bg-primary text-background-dark text-[10px] font-bold px-2 py-1 uppercase tracking-widest">
+                                In Stock</div>
+                            <div class="aspect-square bg-center bg-cover mb-6 border border-white/5"
+                                data-alt="Pure Plant Scalp Balance Shampoo bottle"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA4bolfRGCT0PcbMvGO_aMKeUxc7mS_b-9FoWxPfKkC-RkK67QAoBG5J38Q2Qrm0YdHX0TfvXsttxbomWlWh05uKHTQWCldUGS4q7JeYMY9fYLTfbn6h_jX9toBsMyXs8thq7xKwH9lT7lQEr8QFeXO-bA4sX17xCYO791LwUW1_A3L7m1UdyL2_wVRyJziLivrP5t5R-X019igA-vySSDlxkAW1xI2v5iEoDAGuZxoCye2i6k6XMK2LE8wyMCTN1vaWRK_GB8FlOQ");'>
+                            </div>
+                            <h3 class="text-white text-2xl font-body font-bold mb-1">Scalp Balance Shampoo</h3>
+                            <p class="text-primary font-bold mb-4">PKR 1399 — Pure Alchemy</p>
+                            <button
+                                class="w-full bg-primary/10 border border-primary text-primary py-4 uppercase text-xs font-bold tracking-widest hover:bg-primary hover:text-background-dark transition-all">
                                 Add to Alchemical Kit
                             </button>
-</div>
-<!-- Blurred Product 1 -->
-<div class="relative border border-white/10 p-6 bg-background-dark/50 overflow-hidden">
-<div class="blurred-item h-full flex flex-col">
-<div class="aspect-square bg-center bg-cover mb-6 border border-white/5 grayscale" data-alt="Botanical conditioner abstract visual" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAjocNS51EtKbitoUUQQbzE_ETlv5JlftlQkGETFK29EN0K__LX7HNcKwbCMk1YYg4x1TRicgpJlgH7znc3o-0fmpWpYv53_h6AnJL8ucB6ft7zpKnl5UtK8LYw_T3EIm46CFVWIZtyTJjuSgLq7Czf9ZFytzsmg3FOKTa228h4kP2_o5okfOkdMG2yUeTqmrlQBgM2qSC_uoszsW8rbnYvXFXMkRPvbzfnIPj8ATzsV5S51Esl86A_w11uQ3iCR-wvcpAvy7YlwEA");'></div>
-<h3 class="text-white/40 text-2xl font-body font-bold mb-1">Conditioner</h3>
-<p class="text-accent-sage/40 font-bold mb-4 italic">Gathering Herbs...</p>
-</div>
-<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-<span class="text-accent-sage font-display text-lg uppercase tracking-[0.4em] rotate-12 border border-accent-sage/30 px-4 py-2">Coming Soon</span>
-</div>
-</div>
-<!-- Blurred Product 2 -->
-<div class="relative border border-white/10 p-6 bg-background-dark/50 overflow-hidden">
-<div class="blurred-item h-full flex flex-col">
-<div class="aspect-square bg-center bg-cover mb-6 border border-white/5 grayscale" data-alt="Botanical scalp serum abstract visual" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDCb_dSuTjV_s4Jh7xARV71Uvx8zh1qhkR062F_KrsCCOUI0nC-kYbGVfP4rYT0RFo-lS-xKtQqsHb3zYuy8j9Z8vhxpwXqfhDUQa01pZKuvkHkK-9dza00F-WcBq1im0X3Tnz3Jf3a4lrgyQCg7JrgOZ97TwOJ3oPEhBNkFItB6IucR1xN4GZdA7NLvNVWhK9adOdv2qLW1T7zdCzBIn-7TZEx_uY9fWTFIzUG21ymnxRzKu43MJRdrDuOKhk2ExXymk0n1V-wBQY");'></div>
-<h3 class="text-white/40 text-2xl font-body font-bold mb-1">Scalp Serum</h3>
-<p class="text-accent-sage/40 font-bold mb-4 italic">Gathering Herbs...</p>
-</div>
-<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-<span class="text-accent-sage font-display text-lg uppercase tracking-[0.4em] -rotate-12 border border-accent-sage/30 px-4 py-2">Coming Soon</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer / Badge -->
-<footer class="bg-forest-deep border-t border-primary/20 px-6 md:px-20 py-16">
-<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
-<div class="flex flex-col gap-4 items-center md:items-start">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary text-4xl">eco</span>
-<h2 class="heading-gold text-3xl font-bold tracking-tighter">PURE PLANT</h2>
-</div>
-<p class="text-accent-sage text-sm uppercase tracking-widest">Handcrafted in Pakistan • Alchemical Tradition</p>
-</div>
-<div class="flex flex-col items-center">
-<div class="border-2 border-primary p-4 text-center max-w-[280px]">
-<span class="material-symbols-outlined text-primary mb-2">science</span>
-<p class="text-white font-body font-bold uppercase tracking-widest text-xs leading-relaxed">
-                            No Sulfates. No Silicones.<br/>Just Alchemy.
+                        </div>
+                        <!-- Blurred Product 1 -->
+                        <div class="relative border border-white/10 p-6 bg-background-dark/50 overflow-hidden">
+                            <div class="blurred-item h-full flex flex-col">
+                                <div class="aspect-square bg-center bg-cover mb-6 border border-white/5 grayscale"
+                                    data-alt="Botanical conditioner abstract visual"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAjocNS51EtKbitoUUQQbzE_ETlv5JlftlQkGETFK29EN0K__LX7HNcKwbCMk1YYg4x1TRicgpJlgH7znc3o-0fmpWpYv53_h6AnJL8ucB6ft7zpKnl5UtK8LYw_T3EIm46CFVWIZtyTJjuSgLq7Czf9ZFytzsmg3FOKTa228h4kP2_o5okfOkdMG2yUeTqmrlQBgM2qSC_uoszsW8rbnYvXFXMkRPvbzfnIPj8ATzsV5S51Esl86A_w11uQ3iCR-wvcpAvy7YlwEA");'>
+                                </div>
+                                <h3 class="text-white/40 text-2xl font-body font-bold mb-1">Conditioner</h3>
+                                <p class="text-accent-sage/40 font-bold mb-4 italic">Gathering Herbs...</p>
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                <span
+                                    class="text-accent-sage font-display text-lg uppercase tracking-[0.4em] rotate-12 border border-accent-sage/30 px-4 py-2">Coming
+                                    Soon</span>
+                            </div>
+                        </div>
+                        <!-- Blurred Product 2 -->
+                        <div class="relative border border-white/10 p-6 bg-background-dark/50 overflow-hidden">
+                            <div class="blurred-item h-full flex flex-col">
+                                <div class="aspect-square bg-center bg-cover mb-6 border border-white/5 grayscale"
+                                    data-alt="Botanical scalp serum abstract visual"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDCb_dSuTjV_s4Jh7xARV71Uvx8zh1qhkR062F_KrsCCOUI0nC-kYbGVfP4rYT0RFo-lS-xKtQqsHb3zYuy8j9Z8vhxpwXqfhDUQa01pZKuvkHkK-9dza00F-WcBq1im0X3Tnz3Jf3a4lrgyQCg7JrgOZ97TwOJ3oPEhBNkFItB6IucR1xN4GZdA7NLvNVWhK9adOdv2qLW1T7zdCzBIn-7TZEx_uY9fWTFIzUG21ymnxRzKu43MJRdrDuOKhk2ExXymk0n1V-wBQY");'>
+                                </div>
+                                <h3 class="text-white/40 text-2xl font-body font-bold mb-1">Scalp Serum</h3>
+                                <p class="text-accent-sage/40 font-bold mb-4 italic">Gathering Herbs...</p>
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                <span
+                                    class="text-accent-sage font-display text-lg uppercase tracking-[0.4em] -rotate-12 border border-accent-sage/30 px-4 py-2">Coming
+                                    Soon</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer / Badge -->
+        <a id="footer"></a>
+        <footer class="bg-forest-deep border-t border-primary/20 px-6 md:px-20 py-16">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
+                <div class="flex flex-col gap-4 items-center md:items-start">
+                    <div class="flex items-center gap-4">
+                        <img src="assets/logo_seal.jpg" alt="Pure Plant Seal" class="logo-seal-lg" />
+                        <div>
+                            <h2 class="heading-gold text-3xl font-bold tracking-tighter">PURE PLANT</h2>
+                            <p class="text-accent-sage/70 text-[10px] uppercase tracking-[0.3em] mt-1">Apothecary &
+                                Botanicals</p>
+                        </div>
+                    </div>
+                    <p class="text-accent-sage text-sm uppercase tracking-widest">Handcrafted in Pakistan • Alchemy of
+                        Nature</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="border-2 border-primary p-4 text-center max-w-[280px]">
+                        <span class="material-symbols-outlined text-primary mb-2">science</span>
+                        <p class="text-white font-body font-bold uppercase tracking-widest text-xs leading-relaxed">
+                            No Sulfates. No Silicones.<br />Just Alchemy.
                         </p>
-</div>
-</div>
-<div class="flex flex-col gap-6 text-center md:text-right">
-<div class="flex gap-6 justify-center md:justify-end">
-<a class="text-white/60 hover:text-primary transition-colors uppercase text-[10px] tracking-widest font-bold" href="#">Privacy</a>
-<a class="text-white/60 hover:text-primary transition-colors uppercase text-[10px] tracking-widest font-bold" href="#">Shipping</a>
-<a class="text-white/60 hover:text-primary transition-colors uppercase text-[10px] tracking-widest font-bold" href="#">Contact</a>
-</div>
-<p class="text-white/30 text-[10px] uppercase tracking-[0.3em]">© 2026 Pure Plant Botanical. All rights reserved.</p>
-</div>
-</div>
-</footer>
-</div>
-</body></html>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-6 text-center md:text-right">
+                    <div class="flex gap-6 justify-center md:justify-end">
+                        <a class="text-white/60 hover:text-primary transition-colors uppercase text-[10px] tracking-widest font-bold"
+                            href="#">Privacy</a>
+                        <a class="text-white/60 hover:text-primary transition-colors uppercase text-[10px] tracking-widest font-bold"
+                            href="#">Shipping</a>
+                        <a class="text-white/60 hover:text-primary transition-colors uppercase text-[10px] tracking-widest font-bold"
+                            href="#">Contact</a>
+                    </div>
+                    <p class="text-white/30 text-[10px] uppercase tracking-[0.3em]">© 2026 Pure Plant Botanical. All
+                        rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
