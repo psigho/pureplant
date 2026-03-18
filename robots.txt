@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pureplant.pk/sitemap.xml

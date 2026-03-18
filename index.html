@@ -28,6 +28,94 @@
         content="Pure Plant offers a return to balance with 100% botanical alchemy. Ancient potency, zero synthetic elements.">
     <meta property="twitter:image" content="https://pureplant.pk/assets/Source_Truth/Pureplant_Source_Bottle_Front.jpg">
 
+    <!-- Robots & Indexing -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="icon" type="image/png" href="/assets/Brand_Assets/logo_transparent_deepMoss.png">
+    <link rel="alternate" hreflang="en" href="https://pureplant.pk/">
+
+    <!-- Structured Data: Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Pure Plant",
+        "url": "https://pureplant.pk",
+        "logo": "https://pureplant.pk/assets/Brand_Assets/logo_transparent_deepMoss.png",
+        "description": "Zero-synthetic botanical hair care brand from Lahore, Pakistan",
+        "sameAs": [
+            "https://www.instagram.com/pureplant.pk/",
+            "https://www.facebook.com/61586743783147/"
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Lahore",
+            "addressRegion": "Punjab",
+            "addressCountry": "Pakistan"
+        }
+    }
+    </script>
+
+    <!-- Structured Data: Product -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Scalp Balance Botanical Shampoo",
+        "brand": {
+            "@type": "Brand",
+            "name": "Pure Plant"
+        },
+        "description": "100% botanical, zero-synthetic shampoo with Shikakai, Reetha, Amla, Aloe Vera, and Wild Mint. Restores scalp pH balance, eliminates chemical buildup. Small batch, hand poured in Lahore.",
+        "image": "https://pureplant.pk/assets/shampoo_studio_shot_clean_1772633965909.png",
+        "offers": {
+            "@type": "Offer",
+            "priceCurrency": "PKR",
+            "price": "999",
+            "availability": "https://schema.org/InStock",
+            "url": "https://wa.me/923169522291"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "3"
+        }
+    }
+    </script>
+
+    <!-- Structured Data: FAQ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What ingredients are in Pure Plant shampoo?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Shikakai, Reetha, Amla, Aloe Vera, Wild Mint, and Argan Oil. Zero synthetic elements - no sulfates, parabens, or silicones."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is Pure Plant suitable for hard water areas?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, Reetha (soapnut) naturally breaks down hard-water mineral buildup, making it ideal for cities like Lahore and Karachi."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I order Pure Plant products?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You can order directly via WhatsApp at +92 316 9522291 or through our website."
+                }
+            }
+        ]
+    }
+    </script>
+
     <!-- Semantic & Performance Tags -->
     <link rel="canonical" href="https://pureplant.pk/">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -152,15 +240,17 @@
         <!-- Background Logo Stamp (Single, Massive, Centered, Rotating, Fixed globally) -->
         <div
             class="fixed inset-0 z-0 flex items-center justify-center pointer-events-none opacity-[0.05] overflow-hidden">
-            <img src="assets/Brand_Assets/logo_transparent_deepMoss.png" alt="Stamp Center"
+            <img src="assets/Brand_Assets/logo_transparent_deepMoss.png" alt="Pure Plant botanical hair care logo"
+                loading="lazy"
                 class="absolute h-[150vh] w-[150vh] max-w-none object-contain rounded-full animate-[spin_120s_linear_infinite]">
         </div>
 
         <!-- Navigation -->
         <nav
             class="fixed w-full z-40 py-4 px-6 md:px-12 flex justify-between items-center bg-warmCream/90 backdrop-blur-sm border-b border-deepMoss/5">
-            <a href="#" class="block">
-                <img src="assets/Brand_Assets/logo_transparent_deepMoss.png" alt="Pure Plant Seal"
+            <a href="#" class="block" aria-label="Pure Plant home">
+                <img src="assets/Brand_Assets/logo_transparent_deepMoss.png" alt="Pure Plant botanical hair care logo"
+                    loading="lazy"
                     class="h-16 md:h-20 object-contain blend-multiply">
             </a>
             <a href="#collection"
@@ -297,7 +387,8 @@
                         muted playsinline></video>
 
                     <!-- Current Image Poster -->
-                    <img id="hero-image" src="assets/hero_visual_placeholder.png" alt="Pure Plant Campaign Visual"
+                    <img id="hero-image" src="assets/hero_visual_placeholder.png" alt="Pure Plant zero-synthetic botanical hair care products"
+                        loading="lazy"
                         class="w-full h-full object-cover">
                 </div>
             </div>
@@ -402,7 +493,8 @@
                         </div>
                         <!-- The main image that changes on hover -->
                         <img id="ingredient-display" src="assets/real_bottle_herbal_showcase_1772630520867.png"
-                            alt="Botanical Ingredients"
+                            alt="Pure Plant shampoo with Shikakai Reetha Amla botanical ingredients"
+                            loading="lazy"
                             class="w-full h-full object-cover relative z-10 transition-opacity duration-500 blend-multiply">
                     </div>
                 </div>
@@ -570,8 +662,9 @@
                 <div class="reveal delay-100 group">
                     <div
                         class="aspect-[3/4] bg-[#F0EBE0] relative overflow-hidden mb-6 border border-deepMoss/10 transition-colors group-hover:bg-[#EBE2D0]">
-                        <img src="assets/shampoo_studio_shot_clean_1772633965909.png" alt="Scalp Balance Shampoo"
+                        <img src="assets/shampoo_studio_shot_clean_1772633965909.png" alt="Pure Plant Scalp Balance Botanical Shampoo 120ml"
                             title="Scalp Balance Shampoo"
+                            loading="lazy"
                             class="w-full h-full object-cover blend-multiply group-hover:scale-105 transition-transform duration-1000">
                         <div
                             class="absolute top-0 right-0 bg-deepMoss text-warmCream text-[10px] font-bold px-3 py-2 uppercase tracking-widest">
@@ -584,6 +677,7 @@
                     <p class="font-sans text-sm text-earthyBrown mb-6 line-clamp-2">The flagship formula. Restores pH
                         balance and eliminates chemical buildup.</p>
                     <a href="https://wa.me/923169522291?text=Order%20Scalp%20Balance%20Shampoo"
+                        aria-label="Order Scalp Balance Shampoo via WhatsApp"
                         class="block w-full bg-deepMoss text-warmCream text-center py-4 font-sans font-bold uppercase tracking-[0.2em] text-xs hover:bg-amber transition-colors">
                         Add to Kit
                     </a>
@@ -593,8 +687,9 @@
                 <div class="reveal delay-200 opacity-60 pointer-events-none grayscale">
                     <div
                         class="aspect-[3/4] bg-[#F0EBE0] relative overflow-hidden mb-6 border border-deepMoss/10 flex items-center justify-center">
-                        <img src="assets/surprise_product_placeholder_1772632713112.png" alt="Surprise Product"
+                        <img src="assets/surprise_product_placeholder_1772632713112.png" alt="Pure Plant upcoming botanical product Spring 2026"
                             title="Surprise Product"
+                            loading="lazy"
                             class="w-full h-full object-cover blend-multiply blur-md opacity-40">
                         <div class="absolute inset-0 flex items-center justify-center">
                             <span
@@ -610,8 +705,9 @@
                 <div class="reveal delay-300 opacity-60 pointer-events-none grayscale">
                     <div
                         class="aspect-[3/4] bg-[#F0EBE0] relative overflow-hidden mb-6 border border-deepMoss/10 flex items-center justify-center">
-                        <img src="assets/growth_serum_placeholder_1772632540154.png" alt="Growth Serum"
+                        <img src="assets/growth_serum_placeholder_1772632540154.png" alt="Pure Plant botanical growth serum for hair"
                             title="Growth Serum"
+                            loading="lazy"
                             class="w-full h-full object-cover blend-multiply blur-[2px] opacity-70">
                         <div class="absolute inset-0 flex items-center justify-center">
                             <span
@@ -658,6 +754,7 @@
 
                 <div class="mt-16">
                     <button onclick="document.getElementById('review-form-modal').classList.remove('hidden')"
+                        aria-label="Open review submission form"
                         class="border border-deepMoss text-deepMoss px-8 py-3 font-sans text-sm tracking-widest uppercase hover:bg-deepMoss hover:text-warmCream transition-colors">
                         Leave a Review
                     </button>
@@ -669,6 +766,7 @@
                 class="fixed inset-0 z-50 hidden bg-deepMoss/90 backdrop-blur-sm flex items-center justify-center p-6">
                 <div class="bg-warmCream p-8 max-w-md w-full relative">
                     <button onclick="document.getElementById('review-form-modal').classList.add('hidden')"
+                        aria-label="Close review form"
                         class="absolute top-4 right-4 text-deepMoss hover:text-earthyBrown text-2xl">&times;</button>
                     <h3 class="font-serif text-3xl text-deepMoss mb-6">Share Your Experience</h3>
                     <form id="review-form" class="flex flex-col gap-4 font-sans">
@@ -685,6 +783,7 @@
                             required
                             class="border border-deepMoss/20 bg-white p-3 focus:outline-none focus:border-deepMoss resize-none"></textarea>
                         <button type="submit" id="submit-review-btn"
+                            aria-label="Submit your review"
                             class="bg-deepMoss text-warmCream py-4 uppercase tracking-[0.1em] font-bold mt-2 hover:bg-earthyBrown transition-colors">Submit
                             Review</button>
                         <p id="review-status" class="text-xs text-center text-deepMoss/80 hidden mt-2"></p>
@@ -699,7 +798,8 @@
             <div class="max-w-4xl mx-auto text-center relative z-10">
                 <div
                     class="w-32 h-32 bg-warmCream rounded-full mx-auto flex items-center justify-center mb-12 shadow-2xl overflow-hidden">
-                    <img src="assets/Brand_Assets/logo_transparent_deepMoss.png" alt="Pure Plant Logo Seal"
+                    <img src="assets/Brand_Assets/logo_transparent_deepMoss.png" alt="Pure Plant botanical hair care logo"
+                        loading="lazy"
                         class="h-28 w-28 object-contain blend-multiply filter contrast-125">
                 </div>
 
@@ -710,11 +810,11 @@
 
                 <div
                     class="flex flex-col md:flex-row justify-center gap-8 md:gap-16 font-mono text-sm tracking-widest uppercase opacity-80">
-                    <a href="tel:+923169522291" class="hover:text-earthyBrown transition-colors">Order: +92 316
+                    <a href="tel:+923169522291" aria-label="Call Pure Plant to order" class="hover:text-earthyBrown transition-colors">Order: +92 316
                         9522291</a>
-                    <a href="https://wa.me/923169522291" class="hover:text-earthyBrown transition-colors">WhatsApp
+                    <a href="https://wa.me/923169522291" aria-label="Contact Pure Plant on WhatsApp" class="hover:text-earthyBrown transition-colors">WhatsApp
                         Us</a>
-                    <a href="research/index.html" class="hover:text-earthyBrown transition-colors">Our Science</a>
+                    <a href="research/index.html" aria-label="Read Pure Plant scientific research" class="hover:text-earthyBrown transition-colors">Our Science</a>
                     <span>Lahore, Pakistan</span>
                 </div>
 
