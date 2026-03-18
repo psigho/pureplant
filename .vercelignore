@@ -1,0 +1,34 @@
+# Non-web assets
+Ads/
+Backup_2026_01_20/
+GDrive_Assets/
+Launch_Campaign_Assets/
+remotion-assets/
+output/
+presentation/
+research/assets/
+
+# Python scripts
+*.py
+
+# Audio files
+*.mp3
+
+# Misc
+*.log
+*.txt
+.agent/
+AGENT_NOTES.md
+brand_bible.md
+print.html
+skills_results.txt
+veo3_debug.log
+
+# Large asset folders
+assets/Archive_Backups/
+assets/Campaign_Visuals/
+assets/Packaging/
+assets/Social_Media/
+assets/Strategy_Docs/
+assets/Web_Previews/
+assets/references/
