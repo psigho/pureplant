@@ -241,6 +241,9 @@ Strip away synthetic noise. Deliver potent, research-backed botanical formulas t
 | **Silicones** | Coat hair artificially; prevent real nutrition from penetrating |
 | **Mineral Oil / Paraffin** | Petroleum byproducts — block pores, suffocate scalp |
 
+> [!IMPORTANT]
+> **Pure Plant is NOT sulfur-free.** The product contains naturally-occurring sulfur (a beneficial mineral found in botanical ingredients). This is completely different from **sulfates** (SLS/SLES), which we do NOT use. Do not confuse the two in any copy or marketing materials. Sulfur ≠ Sulfate.
+
 ---
 
 ## 6. Brand Voice & Tone

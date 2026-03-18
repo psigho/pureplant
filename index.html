@@ -4,20 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pure Plant | Alchemy over Chemistry</title>
+    <title>Pure Plant | Zero-Synthetic Botanical Hair Care</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Pure Plant offers a return to balance with 100% botanical alchemy. Ancient potency, zero synthetic elements. Stop fighting your body and start feeding it.">
+    <meta name="keywords"
+        content="Pure Plant, botanical hair care, zero synthetic, natural shampoo, Ayurvedic herbs, Shikakai, Reetha, Amla, hair fall solution, Pakistan hair care">
+    <meta name="author" content="Pure Plant">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pureplant.pk/">
+    <meta property="og:title" content="Pure Plant | Zero-Synthetic Botanical Hair Care">
+    <meta property="og:description"
+        content="Pure Plant offers a return to balance with 100% botanical alchemy. Ancient potency, zero synthetic elements.">
+    <meta property="og:image" content="https://pureplant.pk/assets/Source_Truth/Pureplant_Source_Bottle_Front.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://pureplant.pk/">
+    <meta property="twitter:title" content="Pure Plant | Zero-Synthetic Botanical Hair Care">
+    <meta property="twitter:description"
+        content="Pure Plant offers a return to balance with 100% botanical alchemy. Ancient potency, zero synthetic elements.">
+    <meta property="twitter:image" content="https://pureplant.pk/assets/Source_Truth/Pureplant_Source_Bottle_Front.jpg">
+
+    <!-- Semantic & Performance Tags -->
+    <link rel="canonical" href="https://pureplant.pk/">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://prod.spline.design" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Courier+Prime&display=swap"
         rel="stylesheet">
+    <link rel="preload" href="https://prod.spline.design/REPLACE_ME/scene.splinecode" as="fetch" crossorigin>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         deepMoss: '#2C3E28',
-                        warmCream: '#F5F2EA',
+                        warmCream: '#ECE9DE', /* Softer, cohesive cream tone */
                         earthyBrown: '#8B7E74',
                         amber: '#704018',
                         charcoal: '#333333'
@@ -42,8 +70,43 @@
     </script>
     <style>
         body {
-            background-color: #F5F2EA;
             color: #2C3E28;
+            /* Let Spline serve as the main background */
+            background-color: #ECE9DE;
+        }
+
+        /* Spline 3D Viewer styling */
+        .spline-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            contain: strict;
+            opacity: 0;
+            transition: opacity 1.2s ease;
+            pointer-events: all;
+        }
+
+        .spline-bg.loaded {
+            opacity: 1;
+        }
+
+        .spline-fallback {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background-color: #ECE9DE;
+        }
+
+        spline-viewer {
+            width: 100%;
+            height: 100%;
+            display: block;
         }
 
         .blend-multiply {
@@ -57,7 +120,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('assets/texture.png');
+            /* background-image: url('assets/texture.png'); REMOVED: contained static logo artifacts */
+            background-color: transparent;
             opacity: 0.08;
             pointer-events: none;
             z-index: 50;
@@ -79,231 +143,700 @@
 </head>
 
 <body class="selection:bg-deepMoss selection:text-warmCream overflow-x-hidden">
-    <div class="texture-overlay"></div>
+    <!-- Background visual removed: No 3D Spline elements -->
 
-    <!-- Navigation -->
-    <nav
-        class="fixed w-full z-40 py-4 px-6 md:px-12 flex justify-between items-center bg-warmCream/90 backdrop-blur-sm border-b border-deepMoss/5">
-        <a href="#" class="block">
-            <img src="assets/logo.jpg" alt="Pure Plant Seal" class="h-16 md:h-20 blend-multiply">
-        </a>
-        <a href="#collection"
-            class="bg-deepMoss text-warmCream px-6 py-3 font-sans text-xs font-bold tracking-widest uppercase hover:bg-earthyBrown transition-colors hidden md:block">
-            Shop The Collection
-        </a>
-    </nav>
+    <!-- Content Wrapper ensuring content sits above Spline -->
+    <div class="relative z-10 w-full">
+        <div class="texture-overlay"></div>
 
-    <!-- Hero Section -->
-    <header class="min-h-screen flex flex-col md:flex-row items-center justify-center pt-32 pb-12 px-6 relative">
-        <div class="md:w-1/2 flex flex-col items-start gap-8 z-10 md:pl-20 reveal">
-            <span
-                class="font-mono text-earthyBrown text-xs tracking-[0.2em] uppercase border-b border-deepMoss/20 pb-2">
-                Ancient Potency • Modern Science
-            </span>
-            <h1 class="font-serif text-6xl md:text-8xl leading-[0.9]">
-                <span class="italic block text-earthyBrown/80 text-4xl mb-2">Return to</span>
-                The Source.
-            </h1>
-            <p class="font-sans text-deepMoss/80 max-w-md text-lg leading-relaxed">
-                Unlock the dormant power of 100% botanical alchemy. No sulfates. No noise. Just raw, earth-given
-                restoration.
-            </p>
-            <div class="mt-4 flex gap-4">
-                <a href="#collection"
-                    class="bg-deepMoss text-warmCream px-10 py-5 font-sans font-medium tracking-widest uppercase hover:scale-105 transition-transform shadow-[4px_4px_0px_#8B7E74]">
-                    Begin Ritual
-                </a>
-                <a href="research/index.html"
-                    class="border border-deepMoss text-deepMoss px-10 py-5 font-sans font-medium tracking-widest uppercase hover:bg-deepMoss/5 transition-colors">
-                    The Science
-                </a>
-            </div>
-        </div>
-
-        <div class="md:w-1/2 mt-16 md:mt-0 relative flex justify-center z-10 reveal delay-200">
-            <!-- Authentic Bottle Asset -->
-            <div class="relative w-full max-w-md">
-                <div class="absolute inset-0 bg-deepMoss/5 blur-3xl rounded-full transform scale-90 translate-y-12">
-                </div>
-                <img src="assets/bottle.jpg" alt="Pure Plant Scalp Balance Shampoo"
-                    class="relative w-full blend-multiply drop-shadow-2xl hover:scale-105 transition-transform duration-1000 ease-out">
-            </div>
-        </div>
-    </header>
-
-    <!-- Marquee Banner -->
-    <div class="py-6 border-y border-deepMoss overflow-hidden bg-deepMoss text-warmCream">
+        <!-- Background Logo Stamp (Single, Massive, Centered, Rotating, Fixed globally) -->
         <div
-            class="whitespace-nowrap animate-marquee flex gap-12 font-serif text-2xl md:text-4xl italic items-center opacity-90">
-            <span>POLLUTION. STRESS. HAIRFALL. ENOUGH.</span>
-            <span class="w-2 h-2 rounded-full bg-earthyBrown"></span>
-            <span>RETURN TO THE ROOT.</span>
-            <span class="w-2 h-2 rounded-full bg-earthyBrown"></span>
-            <span>ALCHEMY OVER CHEMISTRY.</span>
-            <span class="w-2 h-2 rounded-full bg-earthyBrown"></span>
-            <span>POLLUTION. STRESS. HAIRFALL. ENOUGH.</span>
-            <span class="w-2 h-2 rounded-full bg-earthyBrown"></span>
-            <span>RETURN TO THE ROOT.</span>
-        </div>
-    </div>
-
-    <!-- The Menu (Ingredients) -->
-    <section class="py-24 md:py-32 px-6 max-w-7xl mx-auto">
-        <div class="text-center mb-20 reveal">
-            <h2 class="font-serif text-5xl md:text-6xl mb-6">The Menu.</h2>
-            <p class="font-mono text-earthyBrown">Harvested from the earth, not a lab.</p>
+            class="fixed inset-0 z-0 flex items-center justify-center pointer-events-none opacity-[0.05] overflow-hidden">
+            <img src="assets/Brand_Assets/logo_transparent_deepMoss.png" alt="Stamp Center"
+                class="absolute h-[150vh] w-[150vh] max-w-none object-contain rounded-full animate-[spin_120s_linear_infinite]">
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            <div class="relative reveal group">
+        <!-- Navigation -->
+        <nav
+            class="fixed w-full z-40 py-4 px-6 md:px-12 flex justify-between items-center bg-warmCream/90 backdrop-blur-sm border-b border-deepMoss/5">
+            <a href="#" class="block">
+                <img src="assets/Brand_Assets/logo_transparent_deepMoss.png" alt="Pure Plant Seal"
+                    class="h-16 md:h-20 object-contain blend-multiply">
+            </a>
+            <a href="#collection"
+                class="bg-deepMoss text-warmCream px-6 py-3 font-sans text-xs font-bold tracking-widest uppercase hover:bg-earthyBrown transition-colors hidden md:block">
+                Shop The Collection
+            </a>
+        </nav>
+
+        <!-- Custom Animation Styles -->
+        <style>
+            @keyframes smoothFloat {
+                0% {
+                    transform: translateY(0px) scale(1);
+                    filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
+                }
+
+                50% {
+                    transform: translateY(-20px) scale(1.02);
+                    filter: drop-shadow(0 35px 35px rgb(0 0 0 / 0.2));
+                }
+
+                100% {
+                    transform: translateY(0px) scale(1);
+                    filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
+                }
+            }
+
+            @keyframes fadeInUp {
+                0% {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .animate-float {
+                animation: smoothFloat 6s ease-in-out infinite;
+            }
+
+            .animate-fade-up {
+                opacity: 0;
+                animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            }
+
+            .delay-100 {
+                animation-delay: 100ms;
+            }
+
+            .delay-200 {
+                animation-delay: 200ms;
+            }
+
+            .delay-300 {
+                animation-delay: 300ms;
+            }
+
+            .delay-400 {
+                animation-delay: 400ms;
+            }
+
+            .delay-500 {
+                animation-delay: 500ms;
+            }
+
+            .interactive-product {
+                transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            }
+
+            .interactive-product:hover {
+                transform: scale(1.1) rotate(2deg) translateY(-10px);
+                z-index: 50;
+                cursor: pointer;
+            }
+        </style>
+
+        <!-- Hero Section -->
+        <header
+            class="min-h-[90vh] flex flex-col md:flex-row items-center justify-between pt-32 pb-12 px-6 lg:px-24 xl:px-32 relative overflow-hidden">
+
+            <!-- Left Content: High-Converting Copy -->
+            <div class="md:w-[60%] lg:w-[55%] flex flex-col items-start gap-6 z-10 relative">
+                <span
+                    class="font-mono text-earthyBrown text-xs tracking-[0.2em] uppercase border-b border-earthyBrown/30 pb-2 animate-fade-up">
+                    Nature vs Chemicals
+                </span>
+                <h1
+                    class="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.1] text-deepMoss animate-fade-up delay-100">
+                    <span class="italic block text-earthyBrown/80 text-3xl md:text-4xl mb-2">Stop fighting your
+                        hair.</span>
+                    Return to the roots.
+                </h1>
+                <p
+                    class="font-sans text-deepMoss/80 max-w-md text-base md:text-lg leading-relaxed mt-2 animate-fade-up delay-200">
+                    For years, we've damaged our hair with harsh chemical shampoos. Pure Plant brings back the wisdom of
+                    our ancestors with 100% natural hair care. Made with real Shikakai, Reetha, Aloe, and Amla. Just
+                    pure herbs, zero harmful chemicals.
+                </p>
+                <div class="mt-6 flex flex-col sm:flex-row gap-4 w-full sm:w-auto animate-fade-up delay-300">
+                    <a href="#collection"
+                        class="bg-deepMoss text-warmCream px-8 py-4 text-center font-sans text-sm font-semibold tracking-widest uppercase hover:bg-charcoal transition-colors shadow-[2px_2px_0px_#8B7E74]">
+                        Shop Collection
+                    </a>
+                    <a href="research/index.html"
+                        class="border border-earthyBrown text-deepMoss text-center px-8 py-4 font-sans text-sm font-semibold tracking-widest uppercase hover:bg-earthyBrown/10 transition-colors shadow-[2px_2px_0px_rgba(139,126,116,0.2)]">
+                        The Science
+                    </a>
+                </div>
+
+                <!-- Pre-Launch Sales Counter -->
                 <div
-                    class="absolute inset-0 border border-deepMoss transform translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform">
-                </div>
-                <img src="assets/ingredients.jpg" alt="Raw Botanical Ingredients"
-                    class="w-full relative z-10 grayscale hover:grayscale-0 transition-all duration-1000 blend-multiply">
-            </div>
-
-            <div class="space-y-12 reveal delay-200">
-                <!-- Ingredient 1 -->
-                <div class="group">
-                    <h3 class="font-serif text-3xl mb-2 group-hover:text-earthyBrown transition-colors cursor-default">
-                        Bhringraj</h3>
-                    <p class="font-mono text-xs uppercase tracking-widest text-deepMoss/60 mb-2">The King of Hair</p>
-                    <p class="font-sans text-deepMoss/80 leading-relaxed">Ancient Ayurvedic herb renowned for darkening
-                        roots and reversing premature greying caused by urban stress.</p>
-                </div>
-                <!-- Ingredient 2 -->
-                <div class="group">
-                    <h3 class="font-serif text-3xl mb-2 group-hover:text-earthyBrown transition-colors cursor-default">
-                        Reetha</h3>
-                    <p class="font-mono text-xs uppercase tracking-widest text-deepMoss/60 mb-2">Natural Soapnut</p>
-                    <p class="font-sans text-deepMoss/80 leading-relaxed">Nature's own surfactant. Provides a rich,
-                        chemical-free lather that cleanses without stripping essential scalp oils.</p>
-                </div>
-                <!-- Ingredient 3 -->
-                <div class="group">
-                    <h3 class="font-serif text-3xl mb-2 group-hover:text-earthyBrown transition-colors cursor-default">
-                        Amla</h3>
-                    <p class="font-mono text-xs uppercase tracking-widest text-deepMoss/60 mb-2">The Antioxidant Shield
+                    class="mt-8 flex items-center gap-3 bg-[#E4E1D1]/60 py-2.5 px-5 rounded-full border border-earthyBrown/20 shadow-sm w-fit animate-fade-up delay-400">
+                    <div class="flex -space-x-2">
+                        <div
+                            class="w-8 h-8 rounded-full border-2 border-[#ECE9DE] bg-deepMoss/10 flex items-center justify-center text-xs">
+                            🌿</div>
+                    </div>
+                    <p class="font-sans text-sm text-deepMoss/80 font-medium">
+                        <strong class="font-bold text-deepMoss">Over 80 bottles</strong> sold pre-launch
                     </p>
-                    <p class="font-sans text-deepMoss/80 leading-relaxed">Loaded with Vitamin C to protect hair
-                        follicles from pollution damage and oxidative stress.</p>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- The Collection -->
-    <section id="collection" class="py-24 px-6 md:px-12 bg-white/40 ring-1 ring-deepMoss/5">
-        <div
-            class="flex flex-col md:flex-row justify-between items-end mb-16 max-w-7xl mx-auto border-b border-deepMoss/20 pb-8 reveal">
-            <div>
-                <h2 class="font-serif text-5xl md:text-6xl mb-4">The Collection</h2>
-                <p class="font-mono text-earthyBrown">Small Batch. Hand Poured in Lahore.</p>
-            </div>
-            <div class="text-right hidden md:block">
-                <p class="font-sans font-bold text-deepMoss">FREE SHIPPING NATIONWIDE</p>
-            </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            <!-- Active Product -->
-            <div class="reveal delay-100 group">
+            <!-- Right Content: The High Fidelity Hero Visual -->
+            <div
+                class="md:w-[40%] lg:w-[45%] mt-16 md:mt-0 relative flex justify-center lg:justify-end z-20 animate-fade-up delay-300">
                 <div
-                    class="aspect-[3/4] bg-[#F0EBE0] relative overflow-hidden mb-6 border border-deepMoss/10 transition-colors group-hover:bg-[#EBE2D0]">
-                    <img src="assets/bottle.jpg"
-                        class="w-full h-full object-cover blend-multiply group-hover:scale-105 transition-transform duration-1000">
-                    <div
-                        class="absolute top-0 right-0 bg-deepMoss text-warmCream text-[10px] font-bold px-3 py-2 uppercase tracking-widest">
-                        In Stock</div>
+                    class="relative w-full max-w-[450px] lg:max-w-[550px] rounded-sm overflow-hidden shadow-2xl border border-deepMoss/10 aspect-square bg-deepMoss/5 flex items-center justify-center">
+                    <!-- Video tag prepared for your upcoming video -->
+                    <video id="hero-video" class="absolute inset-0 w-full h-full object-cover hidden" autoplay loop
+                        muted playsinline></video>
+
+                    <!-- Current Image Poster -->
+                    <img id="hero-image" src="assets/hero_visual_placeholder.png" alt="Pure Plant Campaign Visual"
+                        class="w-full h-full object-cover">
                 </div>
-                <div class="flex justify-between items-start mb-2">
-                    <h3 class="font-serif text-2xl">Scalp Balance Shampoo</h3>
-                    <span class="font-mono text-sm text-deepMoss">PKR 1399</span>
+            </div>
+        </header>
+
+        <div class="py-6 border-y border-deepMoss overflow-hidden bg-deepMoss text-warmCream">
+            <div
+                class="whitespace-nowrap animate-marquee flex gap-12 font-serif text-2xl md:text-4xl italic items-center opacity-90">
+                <span>NATURE VS CHEMICALS.</span>
+                <span class="w-2 h-2 rounded-full bg-earthyBrown"></span>
+                <span>BACK TO DESI ROOTS.</span>
+                <span class="w-2 h-2 rounded-full bg-earthyBrown"></span>
+                <span>ASLI RANG, ASLI ASAR.</span>
+                <span class="w-2 h-2 rounded-full bg-earthyBrown"></span>
+                <span>NATURE VS CHEMICALS.</span>
+                <span class="w-2 h-2 rounded-full bg-earthyBrown"></span>
+                <span>BACK TO DESI ROOTS.</span>
+            </div>
+        </div>
+
+        <!-- The Root Cause (Science & Pain Points Lecture) -->
+        <section class="py-24 px-6 max-w-5xl mx-auto text-center reveal">
+            <span
+                class="font-mono text-earthyBrown text-xs tracking-[0.2em] uppercase mb-6 block border-b border-earthyBrown/30 w-max mx-auto pb-2">
+                The Root Cause
+            </span>
+            <h2 class="font-serif text-4xl md:text-5xl lg:text-5xl text-deepMoss leading-tight mb-8">
+                Your scalp is an ecosystem, <br><span class="italic text-earthyBrown/80">not a chemistry
+                    experiment.</span>
+            </h2>
+            <div class="font-sans text-deepMoss/80 text-base md:text-lg leading-relaxed space-y-6 max-w-3xl mx-auto">
+                <p>
+                    We've spent decades stripping our natural oils with harsh synthetic foaming agents (SLS) and
+                    suffocating our follicles with silicones. It’s time to stop fighting your body and start feeding it
+                    the way your grandmother did.
+                </p>
+                <p>
+                    Science has finally caught up to what South Asian ancestors knew. By targeting the cellular root of
+                    common issues using bioactive compounds from Shikakai, Reetha, and Amla, we heal rather than hide.
+                </p>
+            </div>
+
+            <!-- Pain Point Grid (Layout) -->
+            <div class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
+                <!-- Pain Point 1 -->
+                <div class="border-t border-deepMoss/20 pt-6 reveal delay-100">
+                    <h4 class="font-serif text-2xl text-deepMoss mb-3">Chemical Buildup.</h4>
+                    <p class="font-sans text-sm text-deepMoss/70 mb-4">Synthetic shampoos strip your scalp, causing
+                        "chip chiphat" (excess oil rebound) as your skin panics to recover.</p>
+                    <p class="font-mono text-xs text-earthyBrown uppercase tracking-wider mb-2">The Science:</p>
+                    <p class="font-sans text-sm text-deepMoss/90"><strong>Shikakai</strong> provides natural saponins
+                        for a sulfate-free cleanse, maintaining your scalp's acidic pH (~5.5) without disrupting the
+                        lipid barrier.</p>
                 </div>
-                <p class="font-sans text-sm text-earthyBrown mb-6 line-clamp-2">The flagship formula. Restores pH
-                    balance and eliminates chemical buildup.</p>
-                <a href="https://wa.me/923169522291?text=Order%20Scalp%20Balance%20Shampoo"
-                    class="block w-full bg-deepMoss text-warmCream text-center py-4 font-sans font-bold uppercase tracking-[0.2em] text-xs hover:bg-amber transition-colors">
-                    Add to Kit
+                <!-- Pain Point 2 -->
+                <div class="border-t border-deepMoss/20 pt-6 reveal delay-200">
+                    <h4 class="font-serif text-2xl text-deepMoss mb-3">Hard Water Damage.</h4>
+                    <p class="font-sans text-sm text-deepMoss/70 mb-4">Mineral buildup from city water (Lahore/Karachi)
+                        chokes follicles and prevents real hydration from penetrating.</p>
+                    <p class="font-mono text-xs text-earthyBrown uppercase tracking-wider mb-2">The Science:</p>
+                    <p class="font-sans text-sm text-deepMoss/90"><strong>Reetha (Soapnut)</strong> acts as nature's
+                        detergent, creating a lush chemical-free lather that breaks down hard-water minerals while
+                        preserving moisture.</p>
+                </div>
+                <!-- Pain Point 3 -->
+                <div class="border-t border-deepMoss/20 pt-6 reveal delay-300">
+                    <h4 class="font-serif text-2xl text-deepMoss mb-3">Urban Pollution.</h4>
+                    <p class="font-sans text-sm text-deepMoss/70 mb-4">Oxidative stress from smog damages melanocytes,
+                        leading to brittle strands and premature greying.</p>
+                    <p class="font-mono text-xs text-earthyBrown uppercase tracking-wider mb-2">The Science:</p>
+                    <p class="font-sans text-sm text-deepMoss/90"><strong>Amla (Indian Gooseberry)</strong> delivers the
+                        highest natural concentration of Vitamin C to stimulate collagen and shield follicles from
+                        pollution.</p>
+                </div>
+            </div>
+
+            <!-- Subtle CTA -->
+            <div class="mt-20 reveal delay-400">
+                <p class="font-serif italic text-2xl text-deepMoss/80 mb-6">"Don't just wash your hair. Return to the
+                    source."</p>
+                <a href="#collection"
+                    class="inline-block border-b hover:border-b-2 border-deepMoss text-deepMoss font-sans text-sm tracking-widest uppercase transition-all pb-1 hover:text-earthyBrown hover:border-earthyBrown">
+                    Explore the Protocol
                 </a>
             </div>
+        </section>
 
-            <!-- Future Product 1 -->
-            <div class="reveal delay-200 opacity-60 pointer-events-none grayscale">
-                <div
-                    class="aspect-[3/4] bg-[#F0EBE0] relative overflow-hidden mb-6 border border-deepMoss/10 flex items-center justify-center">
-                    <img src="assets/bottle.jpg" class="w-full h-full object-cover blend-multiply blur-md opacity-40">
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <span
-                            class="font-serif italic text-2xl text-deepMoss rotate-12 bg-warmCream px-4 py-2 border border-deepMoss/20">Gathering
-                            Herbs...</span>
+        <!-- The Menu (Ingredients) -->
+        <section class="py-24 md:py-32 px-6 max-w-7xl mx-auto">
+            <div class="text-center mb-20 reveal">
+                <h2 class="font-serif text-5xl md:text-6xl mb-6">The Botanicals.</h2>
+                <p class="font-mono text-earthyBrown">What nature brings to your hair — herb by herb.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <!-- Left side: Interactive Image -->
+                <div class="relative w-full max-w-md mx-auto lg:mr-auto mb-10 lg:mb-0 aspect-[4/5] group">
+                    <div class="relative w-full h-full">
+                        <!-- Decorative background frame -->
+                        <div
+                            class="absolute inset-0 border border-deepMoss transform translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform">
+                        </div>
+                        <!-- The main image that changes on hover -->
+                        <img id="ingredient-display" src="assets/real_bottle_herbal_showcase_1772630520867.png"
+                            alt="Botanical Ingredients"
+                            class="w-full h-full object-cover relative z-10 transition-opacity duration-500 blend-multiply">
                     </div>
                 </div>
-                <h3 class="font-serif text-2xl mb-1">Botanical Conditioner</h3>
-                <p class="font-mono text-sm text-earthyBrown">Available Spring 2026</p>
-            </div>
 
-            <!-- Future Product 2 -->
-            <div class="reveal delay-300 opacity-60 pointer-events-none grayscale">
-                <div
-                    class="aspect-[3/4] bg-[#F0EBE0] relative overflow-hidden mb-6 border border-deepMoss/10 flex items-center justify-center">
-                    <img src="assets/bottle.jpg" class="w-full h-full object-cover blend-multiply blur-md opacity-40">
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <span
-                            class="font-serif italic text-2xl text-deepMoss -rotate-12 bg-warmCream px-4 py-2 border border-deepMoss/20">Extraction
-                            in Progress</span>
+                <div class="space-y-4 reveal delay-200" id="ingredients-list">
+                    <!-- Ingredient 1 -->
+                    <div class="group cursor-pointer ingredient-item relative p-6 -ml-6 transition-colors duration-500 overflow-hidden"
+                        data-img="assets/shikakai_aesthetic_1772627181389.png">
+                        <!-- Organic Sweep Background -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-earthyBrown via-earthyBrown/90 to-transparent transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out z-0">
+                        </div>
+
+                        <div class="relative z-10 transition-colors duration-500">
+                            <h3 class="font-serif text-3xl mb-1 text-deepMoss group-hover:text-warmCream">
+                                Shikakai</h3>
+                            <p
+                                class="font-mono text-[10px] uppercase tracking-widest text-deepMoss/60 group-hover:text-warmCream/80 mb-2">
+                                Fruit for Hair
+                            </p>
+                            <p class="font-sans text-sm text-deepMoss/80 group-hover:text-warmCream/90 leading-relaxed">
+                                Nature's original cleanser.
+                                Natural saponins provide gentle, sulfate-free cleansing while maintaining scalp pH
+                                balance.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Ingredient 2 -->
+                    <div class="group cursor-pointer ingredient-item relative p-6 -ml-6 transition-colors duration-500 overflow-hidden"
+                        data-img="assets/reetha_aesthetic_1772627195524.png">
+                        <!-- Organic Sweep Background -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-earthyBrown via-earthyBrown/90 to-transparent transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out z-0">
+                        </div>
+
+                        <div class="relative z-10 transition-colors duration-500">
+                            <h3 class="font-serif text-3xl mb-1 text-deepMoss group-hover:text-warmCream">
+                                Reetha</h3>
+                            <p
+                                class="font-mono text-[10px] uppercase tracking-widest text-deepMoss/60 group-hover:text-warmCream/80 mb-2">
+                                Natural Soapnut
+                            </p>
+                            <p class="font-sans text-sm text-deepMoss/80 group-hover:text-warmCream/90 leading-relaxed">
+                                Nature's detergent. Creates a rich, chemical-free lather that breaks down hard-water minerals while preserving moisture. <em>Jhag bina chemicals ke.</em></p>
+                        </div>
+                    </div>
+                    <!-- Ingredient 3 -->
+                    <div class="group cursor-pointer ingredient-item relative p-6 -ml-6 transition-colors duration-500 overflow-hidden"
+                        data-img="assets/amla_aesthetic_1772627209437.png">
+                        <!-- Organic Sweep Background -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-earthyBrown via-earthyBrown/90 to-transparent transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out z-0">
+                        </div>
+
+                        <div class="relative z-10 transition-colors duration-500">
+                            <h3 class="font-serif text-3xl mb-1 text-deepMoss group-hover:text-warmCream">
+                                Amla</h3>
+                            <p
+                                class="font-mono text-[10px] uppercase tracking-widest text-deepMoss/60 group-hover:text-warmCream/80 mb-2">
+                                The Antioxidant
+                                Shield</p>
+                            <p class="font-sans text-sm text-deepMoss/80 group-hover:text-warmCream/90 leading-relaxed">
+                                Loaded with Vitamin C to stimulate
+                                collagen and protect hair follicles from pollution damage and oxidative stress.</p>
+                        </div>
+                    </div>
+                    <!-- Ingredient 4 -->
+                    <div class="group cursor-pointer ingredient-item relative p-6 -ml-6 transition-colors duration-500 overflow-hidden"
+                        data-img="assets/aloe_vera_aesthetic_1772627225689.png">
+                        <!-- Organic Sweep Background -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-earthyBrown via-earthyBrown/90 to-transparent transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out z-0">
+                        </div>
+
+                        <div class="relative z-10 transition-colors duration-500">
+                            <h3 class="font-serif text-3xl mb-1 text-deepMoss group-hover:text-warmCream">
+                                Aloe Vera</h3>
+                            <p
+                                class="font-mono text-[10px] uppercase tracking-widest text-deepMoss/60 group-hover:text-warmCream/80 mb-2">
+                                The Universal
+                                Soother</p>
+                            <p class="font-sans text-sm text-deepMoss/80 group-hover:text-warmCream/90 leading-relaxed">
+                                Contains proteolytic enzymes that
+                                repair dead skin cells, moisturizing the scalp and creating a protective barrier.</p>
+                        </div>
+                    </div>
+                    <!-- Ingredient 5 -->
+                    <div class="group cursor-pointer ingredient-item relative p-6 -ml-6 transition-colors duration-500 overflow-hidden"
+                        data-img="assets/wild_mint_aesthetic_1772627241009.png">
+                        <!-- Organic Sweep Background -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-earthyBrown via-earthyBrown/90 to-transparent transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out z-0">
+                        </div>
+
+                        <div class="relative z-10 transition-colors duration-500">
+                            <h3 class="font-serif text-3xl mb-1 text-deepMoss group-hover:text-warmCream">
+                                Wild Mint</h3>
+                            <p
+                                class="font-mono text-[10px] uppercase tracking-widest text-deepMoss/60 group-hover:text-warmCream/80 mb-2">
+                                The Universal
+                                Detox</p>
+                            <p class="font-sans text-sm text-deepMoss/80 group-hover:text-warmCream/90 leading-relaxed">
+                                Provides natural vasodilation to
+                                increase blood flow to follicles, neutralizing pollutants and leaving a cooling
+                                sensation.
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <h3 class="font-serif text-2xl mb-1">Growth Serum</h3>
-                <p class="font-mono text-sm text-earthyBrown">Available Spring 2026</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="bg-deepMoss text-warmCream py-20 px-6 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10"
-            style="background-image: url('assets/texture.png'); mix-blend-mode: overlay;"></div>
+        <!-- Script for interactive hover -->
+        <script>
+            const displayImg = document.getElementById('ingredient-display');
+            const ingredientItems = document.querySelectorAll('.ingredient-item');
+            const defaultImg = "assets/real_bottle_herbal_showcase_1772630520867.png";
 
-        <div class="max-w-4xl mx-auto text-center relative z-10">
-            <div class="w-32 h-32 bg-warmCream rounded-full mx-auto flex items-center justify-center mb-12 shadow-2xl">
-                <img src="assets/logo.jpg" class="h-24 blend-multiply filter contrast-125">
-            </div>
+            // Preload images to prevent lag
+            const preloadedImages = [];
+            ingredientItems.forEach(item => {
+                const img = new Image();
+                img.src = item.getAttribute('data-img');
+                preloadedImages.push(img);
 
-            <h2 class="font-serif text-4xl md:text-5xl italic mb-8">"Nature does not hurry, <br>yet everything is
-                accomplished."</h2>
+                // Add hover event listeners
+                item.addEventListener('mouseenter', () => {
+                    displayImg.style.opacity = '0';
+                    setTimeout(() => {
+                        displayImg.src = item.getAttribute('data-img');
+                        // Remove blend-multiply to let the raw vibrant colors of the aesthetic shots shine
+                        displayImg.classList.remove('blend-multiply', 'grayscale');
+                        displayImg.style.opacity = '1';
+                    }, 200);
+                });
+            });
 
-            <div class="w-20 h-px bg-warmCream/30 mx-auto mb-8"></div>
+            // Revert back when mouse leaves the list completely
+            document.getElementById('ingredients-list').addEventListener('mouseleave', () => {
+                displayImg.style.opacity = '0';
+                setTimeout(() => {
+                    displayImg.src = defaultImg;
+                    displayImg.classList.add('blend-multiply');
+                    displayImg.style.opacity = '1';
+                }, 200);
+            });
+        </script>
 
+        <!-- The Collection -->
+        <section id="collection"
+            class="py-24 px-6 md:px-12 bg-white/40 ring-1 ring-deepMoss/5 scroll-mt-24 md:scroll-mt-32">
             <div
-                class="flex flex-col md:flex-row justify-center gap-8 md:gap-16 font-mono text-sm tracking-widest uppercase opacity-80">
-                <a href="tel:+923169522291" class="hover:text-earthyBrown transition-colors">Order: +92 316 9522291</a>
-                <a href="https://wa.me/923169522291" class="hover:text-earthyBrown transition-colors">WhatsApp Us</a>
-                <a href="research/index.html" class="hover:text-earthyBrown transition-colors">Our Science</a>
-                <span>Lahore, Pakistan</span>
+                class="flex flex-col md:flex-row justify-between items-end mb-16 max-w-7xl mx-auto border-b border-deepMoss/20 pb-8 reveal">
+                <div>
+                    <h2 class="font-serif text-5xl md:text-6xl mb-4">The Collection</h2>
+                    <p class="font-mono text-earthyBrown">Small Batch. Hand Poured in Lahore.</p>
+                </div>
+                <div class="text-right hidden md:block">
+                    <p class="font-sans font-bold text-deepMoss">FREE SHIPPING NATIONWIDE</p>
+                </div>
             </div>
 
-            <p class="mt-16 text-xs text-warmCream/40 font-sans">&copy; 2026 Pure Plant. All Rights Reserved.</p>
-        </div>
-    </footer>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <!-- Active Product -->
+                <div class="reveal delay-100 group">
+                    <div
+                        class="aspect-[3/4] bg-[#F0EBE0] relative overflow-hidden mb-6 border border-deepMoss/10 transition-colors group-hover:bg-[#EBE2D0]">
+                        <img src="assets/shampoo_studio_shot_clean_1772633965909.png" alt="Scalp Balance Shampoo"
+                            title="Scalp Balance Shampoo"
+                            class="w-full h-full object-cover blend-multiply group-hover:scale-105 transition-transform duration-1000">
+                        <div
+                            class="absolute top-0 right-0 bg-deepMoss text-warmCream text-[10px] font-bold px-3 py-2 uppercase tracking-widest">
+                            In Stock</div>
+                    </div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-serif text-2xl">Scalp Balance Shampoo</h3>
+                        <span class="font-mono text-sm text-deepMoss">PKR 999</span>
+                    </div>
+                    <p class="font-sans text-sm text-earthyBrown mb-6 line-clamp-2">The flagship formula. Restores pH
+                        balance and eliminates chemical buildup.</p>
+                    <a href="https://wa.me/923169522291?text=Order%20Scalp%20Balance%20Shampoo"
+                        class="block w-full bg-deepMoss text-warmCream text-center py-4 font-sans font-bold uppercase tracking-[0.2em] text-xs hover:bg-amber transition-colors">
+                        Add to Kit
+                    </a>
+                </div>
 
-    <script>
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: "0px"
-        };
+                <!-- Future Product 1 -->
+                <div class="reveal delay-200 opacity-60 pointer-events-none grayscale">
+                    <div
+                        class="aspect-[3/4] bg-[#F0EBE0] relative overflow-hidden mb-6 border border-deepMoss/10 flex items-center justify-center">
+                        <img src="assets/surprise_product_placeholder_1772632713112.png" alt="Surprise Product"
+                            title="Surprise Product"
+                            class="w-full h-full object-cover blend-multiply blur-md opacity-40">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span
+                                class="font-serif italic text-2xl text-deepMoss rotate-12 bg-warmCream px-4 py-2 border border-deepMoss/20">Gathering
+                                Herbs...</span>
+                        </div>
+                    </div>
+                    <h3 class="font-serif text-2xl mb-1">Surprise Product</h3>
+                    <p class="font-mono text-sm text-earthyBrown">In Development</p>
+                </div>
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
+                <!-- Future Product 2 -->
+                <div class="reveal delay-300 opacity-60 pointer-events-none grayscale">
+                    <div
+                        class="aspect-[3/4] bg-[#F0EBE0] relative overflow-hidden mb-6 border border-deepMoss/10 flex items-center justify-center">
+                        <img src="assets/growth_serum_placeholder_1772632540154.png" alt="Growth Serum"
+                            title="Growth Serum"
+                            class="w-full h-full object-cover blend-multiply blur-[2px] opacity-70">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span
+                                class="font-serif italic text-2xl text-deepMoss -rotate-12 bg-warmCream px-4 py-2 border border-deepMoss/20">Extraction
+                                in Progress</span>
+                        </div>
+                    </div>
+                    <h3 class="font-serif text-2xl mb-1">Growth Serum</h3>
+                    <p class="font-mono text-sm text-earthyBrown">Available Spring 2026</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Reviews -->
+        <section id="reviews" class="py-24 px-6 md:px-12 bg-warmCream">
+            <div class="max-w-7xl mx-auto text-center reveal">
+                <h2 class="font-serif text-5xl md:text-6xl text-deepMoss mb-4">Real Results.</h2>
+                <p class="font-mono text-earthyBrown mb-16">See what our community is saying</p>
+
+                <!-- Dynamic Reviews Container -->
+                <div id="reviews-container" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Placeholder Review 1 -->
+                    <div class="bg-white/50 p-8 rounded-sm shadow-sm border border-deepMoss/5 text-left review-card">
+                        <div class="flex text-amber mb-4 text-xl">★★★★★</div>
+                        <p class="font-sans text-deepMoss/80 italic mb-4">"Finally, a shampoo that doesn't leave my hair
+                            feeling like straw. The lather is surprisingly rich for being 100% natural."</p>
+                        <p class="font-mono text-xs text-deepMoss uppercase font-bold">- Ayesha K., Lahore</p>
+                    </div>
+                    <!-- Placeholder Review 2 -->
+                    <div class="bg-white/50 p-8 rounded-sm shadow-sm border border-deepMoss/5 text-left review-card">
+                        <div class="flex text-amber mb-4 text-xl">★★★★★</div>
+                        <p class="font-sans text-deepMoss/80 italic mb-4">"I've struggled with hard water damage in
+                            Karachi for years. Scalp Balance completely changed my hair texture!"</p>
+                        <p class="font-mono text-xs text-deepMoss uppercase font-bold">- Zara M., Karachi</p>
+                    </div>
+                    <!-- Placeholder Review 3 -->
+                    <div class="bg-white/50 p-8 rounded-sm shadow-sm border border-deepMoss/5 text-left review-card">
+                        <div class="flex text-amber mb-4 text-xl">★★★★★</div>
+                        <p class="font-sans text-deepMoss/80 italic mb-4">"The cooling sensation from the wild mint is
+                            incredible. It genuinely feels like a detox for your scalp. Highly recommend."</p>
+                        <p class="font-mono text-xs text-deepMoss uppercase font-bold">- Hassan A., Islamabad</p>
+                    </div>
+                </div>
+
+                <div class="mt-16">
+                    <button onclick="document.getElementById('review-form-modal').classList.remove('hidden')"
+                        class="border border-deepMoss text-deepMoss px-8 py-3 font-sans text-sm tracking-widest uppercase hover:bg-deepMoss hover:text-warmCream transition-colors">
+                        Leave a Review
+                    </button>
+                </div>
+            </div>
+
+            <!-- Review Form Modal -->
+            <div id="review-form-modal"
+                class="fixed inset-0 z-50 hidden bg-deepMoss/90 backdrop-blur-sm flex items-center justify-center p-6">
+                <div class="bg-warmCream p-8 max-w-md w-full relative">
+                    <button onclick="document.getElementById('review-form-modal').classList.add('hidden')"
+                        class="absolute top-4 right-4 text-deepMoss hover:text-earthyBrown text-2xl">&times;</button>
+                    <h3 class="font-serif text-3xl text-deepMoss mb-6">Share Your Experience</h3>
+                    <form id="review-form" class="flex flex-col gap-4 font-sans">
+                        <input type="text" id="reviewer-name" placeholder="Your Name & City (e.g., Sana M., Lahore)"
+                            required
+                            class="border border-deepMoss/20 bg-white p-3 focus:outline-none focus:border-deepMoss">
+                        <select id="review-rating" aria-label="Rating"
+                            class="border border-deepMoss/20 bg-white p-3 focus:outline-none focus:border-deepMoss">
+                            <option value="5">★★★★★ - Excellent</option>
+                            <option value="4">★★★★☆ - Very Good</option>
+                            <option value="3">★★★☆☆ - Good</option>
+                        </select>
+                        <textarea id="review-text" placeholder="Tell us how Pure Plant feels on your scalp..." rows="4"
+                            required
+                            class="border border-deepMoss/20 bg-white p-3 focus:outline-none focus:border-deepMoss resize-none"></textarea>
+                        <button type="submit" id="submit-review-btn"
+                            class="bg-deepMoss text-warmCream py-4 uppercase tracking-[0.1em] font-bold mt-2 hover:bg-earthyBrown transition-colors">Submit
+                            Review</button>
+                        <p id="review-status" class="text-xs text-center text-deepMoss/80 hidden mt-2"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-deepMoss text-warmCream py-20 px-6 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10 texture-overlay blend-multiply"></div>
+
+            <div class="max-w-4xl mx-auto text-center relative z-10">
+                <div
+                    class="w-32 h-32 bg-warmCream rounded-full mx-auto flex items-center justify-center mb-12 shadow-2xl overflow-hidden">
+                    <img src="assets/Brand_Assets/logo_transparent_deepMoss.png" alt="Pure Plant Logo Seal"
+                        class="h-28 w-28 object-contain blend-multiply filter contrast-125">
+                </div>
+
+                <h2 class="font-serif text-4xl md:text-5xl italic mb-8">"Nature does not hurry, <br>yet everything is
+                    accomplished."</h2>
+
+                <div class="w-20 h-px bg-warmCream/30 mx-auto mb-8"></div>
+
+                <div
+                    class="flex flex-col md:flex-row justify-center gap-8 md:gap-16 font-mono text-sm tracking-widest uppercase opacity-80">
+                    <a href="tel:+923169522291" class="hover:text-earthyBrown transition-colors">Order: +92 316
+                        9522291</a>
+                    <a href="https://wa.me/923169522291" class="hover:text-earthyBrown transition-colors">WhatsApp
+                        Us</a>
+                    <a href="research/index.html" class="hover:text-earthyBrown transition-colors">Our Science</a>
+                    <span>Lahore, Pakistan</span>
+                </div>
+
+                <p class="mt-16 text-xs text-warmCream/40 font-sans">&copy; 2026 Pure Plant. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+        <script>
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: "0px"
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        </script>
+
+        <!-- Local API Reviews Logic -->
+        <script>
+            const API_URL = "/api/reviews";
+
+            // Function to load reviews from local API
+            async function loadReviews() {
+                try {
+                    const response = await fetch(API_URL);
+                    if (!response.ok) throw new Error("Failed to fetch reviews");
+
+                    const reviews = await response.json();
+
+                    if (reviews && reviews.length > 0) {
+                        const container = document.getElementById("reviews-container");
+                        container.innerHTML = ""; // Clear placeholders
+
+                        reviews.forEach((data) => {
+                            const stars = "★".repeat(parseInt(data.rating)) + "☆".repeat(5 - parseInt(data.rating));
+
+                            // Format the date if it exists
+                            let dateStr = "";
+                            if (data.createdAt) {
+                                const dateObj = new Date(data.createdAt);
+                                dateStr = dateObj.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+                            }
+
+                            const html = `
+                                <div class="bg-white/50 p-8 rounded-sm shadow-sm border border-deepMoss/5 text-left review-card animate-fade-up relative">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <div class="flex text-amber text-xl">${stars}</div>
+                                        <span class="font-mono text-[10px] text-earthyBrown/60 uppercase tracking-widest">${dateStr}</span>
+                                    </div>
+                                    <p class="font-sans text-deepMoss/80 italic mb-4">"${data.text}"</p>
+                                    <p class="font-mono text-xs text-deepMoss uppercase font-bold">- ${data.name}</p>
+                                </div>
+                            `;
+                            container.insertAdjacentHTML('beforeend', html);
+                        });
+                    }
+                } catch (e) {
+                    console.error("Error loading reviews:", e);
+                }
+            }
+
+            // Load reviews on startup
+            loadReviews();
+
+            // Handle review submission
+            document.getElementById('review-form').addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const statusEl = document.getElementById('review-status');
+                statusEl.classList.remove('hidden');
+
+                const name = document.getElementById('reviewer-name').value;
+                const rating = document.getElementById('review-rating').value;
+                const text = document.getElementById('review-text').value;
+                const btn = document.getElementById('submit-review-btn');
+
+                btn.disabled = true;
+                btn.textContent = "Submitting...";
+
+                try {
+                    const response = await fetch(API_URL, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ name, rating, text })
+                    });
+
+                    if (!response.ok) throw new Error("Server error");
+
+                    statusEl.textContent = "Thank you! Your review has been published.";
+                    statusEl.classList.add('text-deepMoss');
+                    statusEl.classList.remove('text-red-600');
+
+                    // Reload reviews instantly
+                    loadReviews();
+
+                    setTimeout(() => {
+                        document.getElementById('review-form-modal').classList.add('hidden');
+                        document.getElementById('review-form').reset();
+                        btn.disabled = false;
+                        btn.textContent = "Submit Review";
+                        statusEl.classList.add('hidden');
+                    }, 2000);
+
+                } catch (err) {
+                    console.error("Error adding review:", err);
+                    statusEl.textContent = "Error submitting review. Make sure the backend server error is running.";
+                    statusEl.classList.add('text-red-600');
+                    statusEl.classList.remove('text-deepMoss');
+                    btn.disabled = false;
+                    btn.textContent = "Submit Review";
                 }
             });
-        }, observerOptions);
-
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    </script>
+        </script>
+    </div> <!-- End Content Wrapper -->
 </body>
 
 </html>
